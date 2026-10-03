@@ -1,0 +1,674 @@
+<!doctype html>
+<!-- Copyright (c) 2026 geniuskey and LithoBook contributors.
+     Executable code: MIT (see ../LICENSE-MIT).
+     Text, illustrations, questions and explanations: CC-BY-4.0 (see ../LICENSE.md). -->
+<html lang="ko">
+<head>
+<!--head:start {"desc": "반도체 노광의 핵심 용어 160여 개를 한국어·영어·약어로 검색하고, 공식 모음과 k₁ 계산기, 전 범위 20문항 종합 퀴즈로 실력을 점검한다.", "libs": ["lt"]}-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>용어집 & 종합 퀴즈 · LithoBook</title>
+<meta name="description" content="반도체 노광의 핵심 용어 160여 개를 한국어·영어·약어로 검색하고, 공식 모음과 k₁ 계산기, 전 범위 20문항 종합 퀴즈로 실력을 점검한다.">
+<link rel="canonical" href="https://lithobook.euiyun.com/chapters/glossary.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<meta name="theme-color" content="#6741d9">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="LithoBook">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="용어집 &amp; 종합 퀴즈 · LithoBook">
+<meta property="og:description" content="반도체 노광의 핵심 용어 160여 개를 한국어·영어·약어로 검색하고, 공식 모음과 k₁ 계산기, 전 범위 20문항 종합 퀴즈로 실력을 점검한다.">
+<meta property="og:url" content="https://lithobook.euiyun.com/chapters/glossary.html">
+<meta property="og:image" content="https://lithobook.euiyun.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Chapter","LearningResource"],"@id":"https://lithobook.euiyun.com/chapters/glossary.html#chapter","name":"용어집 & 종합 퀴즈","headline":"용어집 & 종합 퀴즈 · LithoBook","description":"반도체 노광의 핵심 용어 160여 개를 한국어·영어·약어로 검색하고, 공식 모음과 k₁ 계산기, 전 범위 20문항 종합 퀴즈로 실력을 점검한다.","url":"https://lithobook.euiyun.com/chapters/glossary.html","position":19,"inLanguage":"ko","isAccessibleForFree":true,"learningResourceType":"인터랙티브 교재","educationalLevel":"공대 학부","image":"https://lithobook.euiyun.com/og.png","dateModified":"2026-10-03","isPartOf":{"@type":"Book","@id":"https://lithobook.euiyun.com/#book","name":"LithoBook · 반도체 노광 교과서","url":"https://lithobook.euiyun.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LithoBook","item":"https://lithobook.euiyun.com/"},{"@type":"ListItem","position":2,"name":"19. 용어집 & 종합 퀴즈","item":"https://lithobook.euiyun.com/chapters/glossary.html"}]}]}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/common.js"></script>
+<script src="../js/litho.js"></script>
+<!--head:end-->
+<style>
+  [hidden] { display: none !important; }
+  .gl-tools { display: grid; gap: 10px; margin-bottom: 18px; }
+  .gl-tools .row { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+  .gl-tools .cap { font-size: 13px; color: var(--text-dim); }
+  .gl-tools .seg button { font-size: 12.5px; padding: 4px 9px; }
+  .gl-search { margin-bottom: 0 !important; }
+  .gl-count { font-size: 13px; color: var(--text-faint); margin-left: auto; font-family: var(--mono); }
+  #gl-list { max-height: min(78vh, 980px); overflow-y: auto; overscroll-behavior: contain; padding: 2px 6px 2px 2px; border-radius: 12px; }
+  .gl-group { position: sticky; top: 0; z-index: 1; background: var(--bg); font-weight: 700; font-size: 13px; color: var(--accent); letter-spacing: .06em; margin: 14px 0 0; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+  .gl-group:first-child { margin-top: 0; }
+  .gl-item h4 { overflow-wrap: anywhere; }
+  .gl-item h4 .abbr { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--accent-2); background: var(--accent-2-soft); border-radius: 5px; padding: 1px 6px; margin-left: 6px; vertical-align: 1px; white-space: nowrap; }
+  .gl-item .cat { font-size: 11.5px; padding: 1px 8px; border-radius: 999px; background: var(--surface); color: var(--text-dim); margin-right: 10px; }
+  .gl-item .ch + .ch { margin-left: 12px; }
+  .gl-item mark { background: color-mix(in srgb, var(--warn) 35%, transparent); color: inherit; border-radius: 3px; padding: 0 1px; }
+  .gl-empty { padding: 24px; text-align: center; color: var(--text-dim); border: 1px dashed var(--border); border-radius: 12px; }
+
+  .fx-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+  .fx { padding: 14px 16px 10px; border-radius: 12px; background: var(--bg-elev); border: 1px solid var(--border); min-width: 0; }
+  .fx h4 { margin: 0 0 2px; font-size: 15px; }
+  .fx h4 a { font-size: 12px; font-weight: 600; margin-left: 8px; }
+  .fx .formula { margin: 6px 0 0; padding: 6px 0 0; background: none; border: 0; box-shadow: none; overflow-x: auto; }
+  .fx .where { font-size: 13.5px; }
+  .sc-table td:first-child { font-weight: 700; white-space: nowrap; }
+  .sc-table td { font-size: 14px; }
+
+  .fq { background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+  .fq-top { display: flex; justify-content: space-between; gap: 10px; padding: 12px 18px 8px; font-size: 13px; color: var(--text-dim); font-family: var(--mono); }
+  .fq-bar { height: 6px; background: var(--surface-2); margin: 0 18px; border-radius: 3px; overflow: hidden; }
+  .fq-bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width .3s ease; }
+  .fq-card, .fq-result { padding: 18px 20px 20px; }
+  .fq-ch { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .04em; margin-bottom: 6px; }
+  .fq-q { font-weight: 700; font-size: 17px; margin: 0 0 14px !important; }
+  .fq-opts { display: grid; gap: 8px; }
+  .fq-opt { text-align: left; font: inherit; font-size: 15px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; line-height: 1.5; display: flex; gap: 10px; align-items: baseline; }
+  .fq-opt .n { font-family: var(--mono); font-size: 12px; color: var(--text-faint); flex: none; }
+  .fq-opt:hover:not(:disabled) { border-color: var(--accent); }
+  .fq-opt:disabled { cursor: default; }
+  .fq-opt.right { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 15%, transparent); font-weight: 600; }
+  .fq-opt.wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 12%, transparent); }
+  .fq-exp { margin-top: 12px; font-size: 15px; color: var(--text-dim); padding: 12px 14px; border-radius: 8px; background: var(--surface); }
+  .fq-exp b.ok { color: var(--ok); } .fq-exp b.bad { color: var(--bad); }
+  .fq-nav { display: flex; justify-content: flex-end; margin-top: 14px; }
+  .fq-result { text-align: center; }
+  .fq-rank { font-size: 13px; letter-spacing: .12em; color: var(--text-faint); font-weight: 700; }
+  .fq-title { font-size: clamp(24px, 5vw, 32px); font-weight: 800; letter-spacing: -0.02em; margin: 4px 0; background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .fq-big { font-family: var(--mono); font-size: 40px; font-weight: 700; }
+  .fq-big small { font-size: 18px; color: var(--text-dim); }
+  .fq-dots { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; margin: 14px 0; }
+  .fq-dots a { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--text); border: 1px solid var(--border); text-decoration: none; }
+  .fq-dots a.ok { background: color-mix(in srgb, var(--ok) 22%, transparent); border-color: var(--ok); }
+  .fq-dots a.bad { background: color-mix(in srgb, var(--bad) 18%, transparent); border-color: var(--bad); }
+  .fq-review { text-align: left; font-size: 14px; color: var(--text-dim); margin: 0 0 16px; }
+  .fq-review a { font-weight: 600; }
+</style>
+</head>
+<body data-chapter="glossary">
+<main class="chapter">
+  <header class="chapter-hero">
+    <div class="eyebrow">Chapter 19</div>
+    <h1>용어집 &amp; 종합 퀴즈</h1>
+    <p class="lead">노광 엔지니어의 대화는 짧은 말로 이루어진다. k₁, NILS, MEEF, 보성, EPE, RLS, SAQP… 이 장은 책 전체에 흩어진 용어를 한곳에 모은 사전이고, 자주 쓰는 식을 한 장에 모은 공식집이며, 레이아웃에서 식각 전사까지 전 범위를 점검하는 마무리 시험이다.</p>
+    <ul class="objectives">
+      <li>한국어·영어·약어 어느 쪽으로든 용어를 찾아 정의를 읽고, 그 용어를 가르치는 장으로 바로 이동할 수 있다.</li>
+      <li>레일리 식에서 붕괴 응력까지 핵심 식을 한 장에서 찾아 쓰고, 파장·NA·하프 피치로 k₁과 한계를 바로 계산한다.</li>
+      <li>20문항 종합 퀴즈로 스스로를 점검하고, 틀린 문제의 장을 다시 본다.</li>
+    </ul>
+    <p style="margin-top:16px"><a href="#glossary">→ 용어집</a> · <a href="#formulas">→ 공식 모음</a> · <a href="#calculator">→ k₁ 계산기</a> · <a href="#final-quiz">→ 종합 퀴즈</a></p>
+  </header>
+
+  <section id="glossary">
+    <h2>용어집</h2>
+    <p>검색창에 한국어(예: <code>초점 심도</code>), 영어(예: <code>pellicle</code>), 약어(예: <code>SRAF</code>) 중 아무것이나 입력하면 바로 걸러진다. 정의 본문도 검색 대상이고, 용어 이름이 일치하는 항목이 먼저 나온다. 분야 칩으로 범위를 좁히고, 가나다순·분야별·장 순서로 묶어 볼 수 있다. 각 항목 아래의 링크는 그 용어를 가르치는 장으로 간다.</p>
+    <div class="gl-tools">
+      <input type="search" class="gl-search" id="gl-q" placeholder="용어 검색: 예) 보성 곡선, shadowing, MEEF" autocomplete="off" aria-label="용어 검색">
+      <div class="row">
+        <span class="cap">분야</span>
+        <div class="seg" id="gl-cat">
+          <button data-value="all" class="on">전체</button>
+          <button data-value="optics">광학</button>
+          <button data-value="mask">마스크</button>
+          <button data-value="opc">OPC</button>
+          <button data-value="resist">레지스트</button>
+          <button data-value="control">공정 제어</button>
+          <button data-value="euv">EUV</button>
+          <button data-value="pattern">패터닝</button>
+          <button data-value="scanner">스캐너</button>
+          <button data-value="node">노드</button>
+        </div>
+      </div>
+      <div class="row">
+        <span class="cap">정렬</span>
+        <div class="seg" id="gl-sort"><button data-value="kor" class="on">가나다순</button><button data-value="cat">분야별</button><button data-value="ch">장 순서</button></div>
+        <span class="gl-count" id="gl-count"></span>
+      </div>
+    </div>
+    <div class="gl-list" id="gl-list" aria-live="polite"></div>
+    <div class="callout warn"><strong>같은 약어, 다른 뜻</strong> EPE(가장자리 배치 오차)는 OPC에서는 “목표 윤곽과 찍힌 윤곽의 차이”를, 오버레이에서는 “CD 오차와 층간 어긋남을 합친 최종 오차”를 가리킨다. 피치와 하프 피치, 노드 이름(2 nm, 1c)과 실제 치수도 자주 섞인다. 숫자를 볼 때는 무엇의 치수인지부터 확인한다.</div>
+  </section>
+
+  <section id="formulas">
+    <h2>공식 모음</h2>
+    <p>이 책에서 되풀이해 쓰는 식을 한곳에 모았다. 식마다 제목 옆의 링크가 유도와 시뮬레이터가 있는 장이다. 기호는 책 전체에서 같다. \(\lambda\)는 진공 파장, \(p\)는 피치, \(\mathrm{NA}\)는 개구수, \(\sigma\)는 부분 간섭성 인자다.</p>
+    <div class="fx-grid">
+      <div class="fx"><h4>레일리 해상도 <a href="resolution.html">→ 3장</a></h4>
+        <div class="formula">$$\mathrm{CD} = k_1\,\frac{\lambda}{\mathrm{NA}}$$<div class="where">CD는 하프 피치. 한 번 노광으로 선/간격을 찍는 이론 한계는 \(k_1 = 0.25\).</div></div></div>
+      <div class="fx"><h4>k₁ 인자 <a href="resolution.html">→ 3장</a></h4>
+        <div class="formula">$$k_1 = \frac{\mathrm{CD}\cdot\mathrm{NA}}{\lambda}$$<div class="where">공정의 난이도를 나타내는 무차원 수. 0.4 아래부터 해상도 향상 기술이 필수다.</div></div></div>
+      <div class="fx"><h4>초점 심도 <a href="focus.html">→ 5장</a></h4>
+        <div class="formula">$$\mathrm{DOF} = k_2\,\frac{\lambda}{\mathrm{NA}^2}$$<div class="where">NA가 큰 경우에는 \(k_2\,\lambda / \bigl(2n(1-\cos\theta)\bigr)\), \(\sin\theta = \mathrm{NA}/n\).</div></div></div>
+      <div class="fx"><h4>격자 방정식 <a href="diffraction.html">→ 2장</a></h4>
+        <div class="formula">$$\sin\theta_m = \sin\theta_i + m\,\frac{\lambda}{p}$$<div class="where">\(m\)은 회절 차수, \(\theta_i\)는 입사각. \(|\sin\theta_m| \le \mathrm{NA}\)인 차수만 렌즈를 통과한다.</div></div></div>
+      <div class="fx"><h4>차단 피치 <a href="illumination.html">→ 4장</a></h4>
+        <div class="formula">$$p_{\min} = \frac{\lambda}{\mathrm{NA}\,(1+\sigma)}$$<div class="where">\(\sigma = 0\)이면 \(\lambda/\mathrm{NA}\), \(\sigma = 1\)이면 \(\lambda/(2\mathrm{NA})\). 쌍극의 이상적 위치는 \(\sigma = \lambda/(2p\,\mathrm{NA})\).</div></div></div>
+      <div class="fx"><h4>NILS <a href="resolution.html">→ 3장</a></h4>
+        <div class="formula">$$\mathrm{NILS} = w\,\left.\frac{d\ln I}{dx}\right|_{\text{edge}}$$<div class="where">\(w\)는 목표 선폭, \(I\)는 공간상 세기. 대략 2 이상이면 양산할 만하고 1.5 아래는 어렵다.</div></div></div>
+      <div class="fx"><h4>대비 <a href="diffraction.html">→ 2장</a></h4>
+        <div class="formula">$$C = \frac{I_{\max}-I_{\min}}{I_{\max}+I_{\min}}$$<div class="where">두 빔 간섭에서는 \(\mathrm{NILS} = 2\pi C\,w/p\). 선과 간격이 1:1이면 \(\pi C\)다.</div></div></div>
+      <div class="fx"><h4>MEEF <a href="mask.html">→ 6장</a></h4>
+        <div class="formula">$$\mathrm{MEEF} = \frac{\partial\,\mathrm{CD}_{\text{wafer}}}{\partial\,(\mathrm{CD}_{\text{mask}}/M)}$$<div class="where">\(M\)은 축소 배율(4). 1이면 마스크 오차가 그대로, k₁이 작을수록 3~5까지 커진다.</div></div></div>
+      <div class="fx"><h4>면적당 광자 수 <a href="stochastic.html">→ 14장</a></h4>
+        <div class="formula">$$N = \frac{D\,\lambda}{h\,c}, \qquad \frac{\sigma_N}{N} = \frac{1}{\sqrt{N}}$$<div class="where">\(D\)는 노광량. 30 mJ/cm²에서 EUV는 약 20개/nm², ArF는 약 290개/nm².</div></div></div>
+      <div class="fx"><h4>브래그 조건 <a href="euv.html">→ 13장</a></h4>
+        <div class="formula">$$m\,\lambda = 2\,d\,\cos\theta$$<div class="where">\(d\)는 Mo/Si 한 쌍의 두께, \(\theta\)는 법선 기준 입사각. 13.5 nm에서 \(d \approx 6.9\) nm.</div></div></div>
+      <div class="fx"><h4>SADP·SAQP 피치 <a href="multipatterning.html">→ 16장</a></h4>
+        <div class="formula">$$p_{\text{SADP}} = \frac{p_{\text{mandrel}}}{2}, \qquad p_{\text{SAQP}} = \frac{p_{\text{mandrel}}}{4}$$<div class="where">스페이서 두께가 최종 선폭을 정한다. 맨드릴 112 nm → SAQP 28 nm.</div></div></div>
+      <div class="fx"><h4>붕괴 응력 <a href="develop.html">→ 9장</a></h4>
+        <div class="formula">$$\sigma_{\max} \approx \frac{6\,\gamma\cos\theta}{S}\left(\frac{H}{W}\right)^{2}$$<div class="where">\(\gamma\)는 린스액의 표면 장력, \(S\)는 간격, \(H/W\)는 종횡비. 종횡비의 제곱으로 커진다.</div></div></div>
+      <div class="fx"><h4>가장자리 거칠기 <a href="cd.html">→ 11장</a></h4>
+        <div class="formula">$$\mathrm{LWR} = \sqrt{2}\;\mathrm{LER}$$<div class="where">두 가장자리가 서로 무관하게 흔들릴 때. 둘 다 3σ로 적는다.</div></div></div>
+      <div class="fx"><h4>그림자 폭 <a href="euv.html">→ 13장</a></h4>
+        <div class="formula">$$s \approx h\,\tan\theta_{\text{CRA}}$$<div class="where">\(h\)는 흡수체 두께. 60 nm, 6°이면 마스크에서 약 6.3 nm, 웨이퍼에서 그 1/4.</div></div></div>
+    </div>
+  </section>
+
+  <section id="calculator">
+    <h2>k₁ 계산기</h2>
+    <p>어떤 무늬를 어떤 장비로 찍을 수 있는지는 숫자 하나, k₁로 가늠한다. 아래에서 장비를 고르고 NA와 하프 피치를 움직여 보자. 왼쪽 원은 렌즈의 동공이고, 두 점은 가장 유리한 비축 조명에서 동공에 들어오는 0차와 1차 회절광이다. 두 점이 원 안에 함께 있어야 무늬가 생긴다. 하프 피치를 줄이면 두 점이 벌어지다가 \(k_1 = 0.25\)에서 원 밖으로 나간다.</p>
+    <div class="sim" id="sim-calc">
+      <div class="sim-head"><span class="sim-tag">SIMULATOR</span><h3>파장·NA·하프 피치 → k₁과 한계</h3></div>
+      <div class="sim-body side">
+        <div class="sim-view"><canvas id="calc-cv"></canvas></div>
+        <div class="sim-controls">
+          <div class="seg" id="calc-sc"></div>
+          <label class="ctrl"><span>개구수 NA <output id="calc-na-out"></output></span><input type="range" id="calc-na" min="0.2" max="0.95" step="0.01" value="0.33"></label>
+          <label class="ctrl"><span>하프 피치 <output id="calc-hp-out"></output></span><input type="range" id="calc-hp" min="0.6" max="2.7" step="0.01" value="1.15"></label>
+        </div>
+      </div>
+      <div class="sim-readout">
+        <div class="stat"><span class="k">파장 λ</span><span class="v" id="calc-o-wl">—</span></div>
+        <div class="stat"><span class="k">k₁</span><span class="v" id="calc-o-k1">—</span></div>
+        <div class="stat"><span class="k">최소 피치 λ/(2NA)</span><span class="v" id="calc-o-pmin">—</span></div>
+        <div class="stat"><span class="k">초점 심도 (k₂ = 1)</span><span class="v" id="calc-o-dof">—</span></div>
+        <div class="stat"><span class="k">판정</span><span class="v" id="calc-o-v">—</span></div>
+      </div>
+      <div class="sim-note">해볼 것: ① EUV 0.33에서 하프 피치 14 nm(LB-28)의 k₁을 확인하고 ArF 액침으로 바꿔 본다. ② ArF 액침에서 하프 피치를 줄여 한 번 노광의 한계(약 36 nm)를 찾는다. ③ NA를 올리면 k₁은 편해지지만 초점 심도가 얼마나 빨리 줄어드는지 본다. (가정: 선/간격 격자, 이상적인 쌍극 조명. 초점 심도는 \(\lambda/(2n(1-\cos\theta))\)의 어림값이고 실제 값은 무늬와 조명에 따라 다르다. NA 1 이상은 물(n = 1.44) 액침으로 본다.)</div>
+    </div>
+    <p>판정의 기준은 경험 법칙이다. k₁이 0.25보다 작으면 0차와 1차가 동공에 함께 들어올 방법이 없으므로 조명이나 OPC로는 풀 수 없고, 노광을 나누거나(<a href="multipatterning.html">16장</a>) 파장을 줄여야 한다(<a href="euv.html">13장</a>). 0.25~0.30은 쌍극 조명과 SMO, 강한 OPC를 모두 동원해야 하는 구간이고, 0.4를 넘으면 비교적 평범한 조명으로도 찍힌다. 아래 표는 세대별 장비의 대표값이다.</p>
+    <div class="table-wrap">
+      <table class="sc-table">
+        <thead><tr><th>장비</th><th class="num">파장 (nm)</th><th class="num">NA</th><th class="num">이론 한계 하프 피치 λ/(4NA)</th><th class="num">양산 k₁ (약)</th><th class="num">양산 하프 피치 (약)</th><th class="num">도입 (약)</th></tr></thead>
+        <tbody id="sc-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="final-quiz">
+    <h2>종합 퀴즈</h2>
+    <p>1장부터 17장까지 전 범위에서 낸 20문항이다. 한 문제씩 풀면 해설과 관련 장 링크가 나오고, 끝까지 풀면 점수와 등급, 다시 볼 장을 보여 준다. 다시 풀기를 누르면 문제 순서와 보기 순서가 새로 섞인다.</p>
+    <div class="fq" id="fq">
+      <div class="fq-top"><span id="fq-count">문제 1 / 20</span><span id="fq-score">정답 0</span></div>
+      <div class="fq-bar"><i id="fq-fill"></i></div>
+      <div class="fq-card" id="fq-card">
+        <div class="fq-ch" id="fq-ch"></div>
+        <p class="fq-q" id="fq-q"></p>
+        <div class="fq-opts" id="fq-opts"></div>
+        <div class="fq-exp" id="fq-exp" hidden aria-live="polite"></div>
+        <div class="fq-nav"><button class="btn primary" id="fq-next" hidden>다음 문제 →</button></div>
+      </div>
+      <div class="fq-result" id="fq-result" hidden>
+        <div class="fq-rank">YOUR GRADE</div>
+        <div class="fq-title" id="fq-title"></div>
+        <div class="fq-big" id="fq-big"></div>
+        <p id="fq-msg" style="color:var(--text-dim)"></p>
+        <div class="fq-dots" id="fq-dots"></div>
+        <p class="fq-review" id="fq-review"></p>
+        <button class="btn primary" id="fq-retry">다시 풀기 (문제 섞기)</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="keypoints" id="summary">
+    <h2>마치며</h2>
+    <ol>
+      <li><b>해상도는 λ, NA, k₁ 세 숫자의 싸움이다.</b> 파장을 줄이고(436 → 13.5 nm), NA를 키우고(액침, High-NA), k₁을 0.25까지 깎아 왔다. 그 대가는 언제나 초점 심도와 공정 여유다.</li>
+      <li><b>무늬는 회절 차수 두 개가 만나야 생긴다.</b> 비축 조명, 위상 변이 마스크, OPC와 SRAF는 모두 “필요한 차수를 동공에 넣고, 그 세기와 위상을 맞추는” 방법이다.</li>
+      <li><b>공간상이 좋아도 레지스트가 받아 주어야 한다.</b> 산 확산은 상을 흐리게 하고, 현상은 선을 쓰러뜨리며, EUV에서는 광자 수가 모자라 확률적 결함이 생긴다. 해상도·거칠기·감도는 함께 좋아지지 않는다.</li>
+      <li><b>찍는 것만큼 재고 맞추는 것이 중요하다.</b> 공정 윈도, CD 균일도, 오버레이는 최종적으로 가장자리 배치 오차(EPE) 예산 하나로 합쳐진다.</li>
+      <li><b>레지스트 무늬는 중간 결과물이다.</b> 하드마스크 적층과 식각이 그것을 실제 막으로 옮기고, 한 번에 못 찍는 피치는 스페이서와 컷 마스크로 나눠 만든다. 직접 돌려 보려면 <a href="lab.html">18장 리소 실험실</a>로, 공정 전체의 그림은 <a href="https://processbook.euiyun.com/">ProcessBook</a>으로 간다.</li>
+    </ol>
+  </section>
+</main>
+<script>
+(function () {
+  "use strict";
+  /* =============================================================== 용어 데이터
+     [한국어, 영어, 약어, 정의, 분야, 장 slug, (함께 볼 장 slug 배열)] */
+  const TERMS = [
+    // 광학
+    ["회절", "Diffraction", "", "빛이 마스크의 좁은 틈을 지나며 여러 방향으로 퍼지는 현상. 무늬가 촘촘할수록 더 큰 각도로 퍼진다. 노광의 해상도 한계는 모두 여기서 나온다.", "optics", "diffraction"],
+    ["회절 차수", "Diffraction order", "", "주기적인 무늬를 지난 빛이 갈라져 나가는 띄엄띄엄한 방향들. 곧게 나가는 0차와 양옆의 ±1차, ±2차…로 번호를 붙인다. 0차만으로는 밝기만 전해지고, 적어도 두 차수가 만나 간섭해야 무늬가 생긴다.", "optics", "diffraction"],
+    ["격자 방정식", "Grating equation", "", "피치 p인 격자에서 m차 회절광의 방향을 주는 식. sinθ = sinθᵢ + mλ/p. 피치가 파장보다 작으면 1차 회절광은 수직 입사에서 아예 전파하지 못한다.", "optics", "diffraction"],
+    ["동공", "Pupil", "", "투영 렌즈가 받아들이는 각도 범위를 원으로 나타낸 것. 원의 반지름이 NA에 해당하고, 회절 차수는 이 원 위의 점으로 그려진다. 원 안에 들어온 차수만 웨이퍼에 도달한다.", "optics", "diffraction", ["illumination"]],
+    ["공간상", "Aerial image", "", "레지스트가 없다고 할 때 웨이퍼 위치에 맺히는 빛의 세기 분포. 광학계가 만든 결과물이며, 레지스트는 이 분포를 문턱으로 잘라 무늬로 바꾼다.", "optics", "diffraction", ["resist"]],
+    ["상 대비", "Image contrast", "", "공간상의 밝은 곳과 어두운 곳의 차이를 (최대 − 최소)/(최대 + 최소)로 나타낸 값. 1이면 완전한 명암, 0이면 무늬가 없다. 피치가 작아지고 초점이 어긋날수록 떨어진다.", "optics", "diffraction"],
+    ["개구수", "Numerical aperture", "NA", "렌즈가 모을 수 있는 빛의 최대 각도를 n·sinθ로 나타낸 값. 클수록 큰 각도의 회절광을 받아 더 촘촘한 무늬를 찍는다. 공기 중에서는 1을 넘지 못하고, 물 액침으로 1.35까지 올렸다.", "optics", "resolution"],
+    ["해상도", "Resolution", "", "구별해서 찍을 수 있는 가장 작은 하프 피치. 고립된 선 하나의 폭은 노광량과 트림으로 더 줄일 수 있으므로, 해상도는 선폭이 아니라 피치로 말해야 한다.", "optics", "resolution"],
+    ["레일리 식", "Rayleigh criterion", "", "해상도를 CD = k₁·λ/NA로 나타낸 식. 파장을 줄이거나, NA를 키우거나, k₁을 낮추는 세 가지 길을 보여 준다. 노광 기술의 역사는 이 식의 세 항을 차례로 밀어 온 과정이다.", "optics", "resolution"],
+    ["k₁ 인자", "k1 factor", "k₁", "하프 피치에 NA를 곱하고 파장으로 나눈 무차원 수. 공정의 난이도를 나타내며, 한 번의 노광으로 선/간격을 찍는 이론 한계는 0.25다. 양산은 대략 0.28~0.4에서 이루어진다.", "optics", "resolution"],
+    ["해상도 향상 기술", "Resolution enhancement technique", "RET", "k₁을 낮추기 위해 쓰는 비축 조명, 위상 변이 마스크, OPC, SRAF 등을 묶어 부르는 말. 파장과 NA를 바꾸지 않고 조명과 마스크를 고쳐 상을 개선한다.", "optics", "resolution", ["illumination", "mask", "opc"]],
+    ["액침 노광", "Immersion lithography", "ArFi", "렌즈와 웨이퍼 사이를 굴절률 1.44의 물로 채우는 방식. 공기에서는 전반사로 빠져나오지 못하던 큰 각도의 빛이 웨이퍼에 도달해 NA가 1.35까지 올라간다. 같은 NA라면 초점 심도도 넓어진다.", "optics", "resolution"],
+    ["엑시머 레이저", "Excimer laser", "KrF / ArF", "심자외선 노광의 광원. KrF는 248 nm, ArF는 193 nm의 빛을 낸다. 선폭이 매우 좁게 다듬어져 굴절 렌즈의 색수차를 피한다.", "optics", "resolution"],
+    ["영상 로그 기울기", "Normalized image log-slope", "NILS", "무늬 가장자리에서 공간상의 로그 기울기에 선폭을 곱한 값. 노광량이 조금 변할 때 선폭이 얼마나 변하는지를 정한다. 클수록 공정 여유가 넓고 거칠기가 작으며, 대략 2 이상을 목표로 한다.", "optics", "resolution", ["window", "stochastic"]],
+    ["부분 간섭성", "Partial coherence", "σ", "조명이 동공을 채우는 정도. 광원의 크기를 동공 반지름에 대한 비 σ로 나타낸다. σ가 0이면 수직으로만 비추는 간섭성 조명이고, 커질수록 비스듬한 빛이 섞여 더 작은 피치까지 찍힌다.", "optics", "illumination"],
+    ["비축 조명", "Off-axis illumination", "OAI", "빛을 마스크에 비스듬히 넣는 조명. 0차가 동공 한쪽으로 치우치므로 반대쪽에 1차가 들어올 자리가 생긴다. 수직 조명보다 최대 두 배 촘촘한 피치를 찍는다.", "optics", "illumination"],
+    ["환형 조명", "Annular illumination", "", "광원의 가운데를 막고 고리 모양만 남긴 조명. 모든 방향의 무늬에 고르게 효과가 있어 여러 방향의 패턴이 섞인 층에 쓴다. 쌍극보다 효과는 약하다.", "optics", "illumination"],
+    ["쌍극 조명", "Dipole illumination", "", "광원을 마주 보는 두 점으로만 남긴 조명. 한 방향의 밀집 선에 가장 강한 대비를 주지만, 수직 방향의 무늬는 거의 찍지 못한다. 한 방향 배선층에 쓴다.", "optics", "illumination"],
+    ["사중극 조명", "Quadrupole (quasar / C-quad) illumination", "", "광원을 네 점으로 남긴 조명. 가로와 세로 무늬를 함께 찍을 수 있고, 극을 대각선에 두면 퀘이사, 축 위에 두면 C-quad라 부른다.", "optics", "illumination"],
+    ["광원-마스크 최적화", "Source-mask optimization", "SMO", "광원의 모양과 마스크 패턴을 함께 계산으로 최적화하는 기술. 광원을 수천 개의 화소로 보고 공정 윈도가 가장 넓어지는 자유 형상을 찾는다. k₁이 0.3 근처인 층에서 쓴다.", "optics", "illumination", ["opc"]],
+    ["차단 피치", "Cutoff pitch", "", "주어진 조명에서 찍을 수 있는 가장 작은 피치. λ/(NA(1 + σ))이며, σ = 1이면 λ/(2NA)다. 이보다 작은 피치에서는 0차만 동공에 들어와 대비가 0이 된다.", "optics", "illumination", ["resolution"]],
+    ["금지 피치", "Forbidden pitch", "", "특정 비축 조명에서 초점 심도가 유난히 좁아지는 중간 피치. 조명이 가장 작은 피치에 맞춰져 있을 때 그 1.5~2배쯤의 피치에서 나타난다. 설계 규칙으로 피하거나 SRAF로 메운다.", "optics", "illumination", ["opc"]],
+    ["편광", "Polarization", "", "빛의 전기장이 흔들리는 방향. NA가 크면 두 빔이 큰 각도로 만나는데, 전기장이 선과 나란한(TE) 빛만 온전히 간섭한다. 그래서 액침 스캐너는 조명의 편광을 무늬 방향에 맞춘다.", "optics", "illumination"],
+    ["초점 심도", "Depth of focus", "DOF", "선폭과 대비가 규격 안에 머무는 초점 범위. k₂·λ/NA²으로 어림하며 NA의 제곱에 반비례한다. 해상도를 높이려고 NA를 키우면 초점 심도가 더 빨리 줄어든다.", "optics", "focus", ["window"]],
+    ["디포커스", "Defocus", "", "웨이퍼 표면이 상이 가장 선명한 면에서 벗어난 거리. 동공 가장자리로 갈수록 커지는 위상 오차를 만들어 상을 흐리게 한다. 웨이퍼 굴곡, 단차, 레벨링 오차가 원인이다.", "optics", "focus"],
+    ["수차", "Aberration", "", "실제 렌즈의 파면이 이상적인 구면에서 벗어난 것. 무늬의 위치를 옮기거나(코마), 방향에 따라 초점이 달라지게(비점) 한다. 최신 스캐너의 파면 오차는 파장의 수천 분의 일 수준이다.", "optics", "focus"],
+    ["제르니케 다항식", "Zernike polynomials", "Z5 … Z11", "동공 위의 파면 오차를 나누어 적는 직교 함수 집합. 항마다 디포커스, 비점 수차, 코마, 구면 수차 같은 이름이 있다. 수차의 크기는 각 항의 계수(파장 단위)로 적는다.", "optics", "focus"],
+    ["축소 투영", "Reduction projection", "4×", "마스크의 무늬를 1/4로 줄여 웨이퍼에 옮기는 방식. 마스크의 치수와 오차가 웨이퍼에서 1/4이 되므로 마스크 제작이 쉬워진다. High-NA EUV는 한 방향만 1/8이다.", "optics", "overview", ["mask"]],
+    // 마스크
+    ["마스크 (레티클)", "Photomask / reticle", "", "회로 무늬가 새겨진 원판. 152 mm 정사각형 석영 기판 위에 차광막을 입혀 만든다. 층마다 한 장 이상이 필요하고, 한 번 축소 투영해 한 필드를 찍는 것을 레티클이라고도 부른다.", "mask", "mask", ["overview"]],
+    ["바이너리 마스크", "Binary intensity mask", "BIM", "빛을 통과시키는 곳과 막는 곳 두 가지로만 이루어진 마스크. 크롬이나 불투명 MoSi를 차광막으로 쓴다. 구조가 단순하지만 작은 피치에서 대비가 낮다.", "mask", "mask"],
+    ["위상 변이 마스크", "Phase-shift mask", "PSM", "빛의 세기뿐 아니라 위상을 180° 뒤집어 쓰는 마스크. 위상이 반대인 빛이 만나는 자리에서 세기가 0이 되어 가장자리가 날카로워진다.", "mask", "mask"],
+    ["감쇠 위상 변이 마스크", "Attenuated PSM", "att-PSM", "차광부가 빛을 약 6% 통과시키되 위상을 180° 뒤집는 마스크. MoSi 막을 쓴다. 제작이 바이너리와 비슷하게 쉬우면서 대비가 좋아져 ArF의 표준이 되었다.", "mask", "mask"],
+    ["교번 위상 변이 마스크", "Alternating PSM", "alt-PSM", "이웃한 투광부의 위상을 0°와 180°로 번갈아 주는 마스크. 0차가 사라지고 ±1차만 남아 피치가 절반인 것처럼 찍힌다. 효과는 가장 크지만 위상 배정이 충돌하는 배치가 있어 쓰임이 제한된다.", "mask", "mask"],
+    ["마스크 오차 증폭 인자", "Mask error enhancement factor", "MEEF", "마스크 선폭 오차가 웨이퍼에서 몇 배로 나타나는지의 비(축소 배율로 나눈 뒤). 이상적으로는 1이지만 k₁이 작아지면 3~5까지 커진다. 마스크 규격을 정하는 기준이다.", "mask", "mask", ["cd"]],
+    ["펠리클", "Pellicle", "", "마스크 무늬면에서 몇 mm 띄워 씌우는 얇은 투명막. 먼지가 무늬면이 아니라 막 위에 앉게 해 초점에서 벗어나게 한다. EUV용은 수십 nm 두께의 막으로 투과율이 약 90%다.", "mask", "mask", ["euv"]],
+    ["마스크 블랭크", "Mask blank", "", "무늬를 새기기 전의 마스크 원판. 석영 기판에 차광막과 레지스트를 입힌 것이다. EUV용은 저열팽창 유리 위에 다층막과 흡수체를 올리며, 블랭크의 결함이 그대로 마스크 결함이 된다.", "mask", "mask", ["euv"]],
+    ["흡수체", "Absorber", "", "마스크에서 빛을 막는 막. 광학 마스크에서는 크롬이나 MoSi, EUV 마스크에서는 탄탈럼계(TaBN) 막을 쓴다. EUV에서는 두께 약 60 nm가 그림자 효과의 원인이 된다.", "mask", "mask", ["euv"]],
+    ["전자빔 묘화기", "E-beam mask writer", "", "마스크 블랭크에 전자빔으로 무늬를 그리는 장비. 빛보다 훨씬 가는 빔을 쓰므로 해상도는 충분하지만 한 점씩 그려 느리다. 마스크 한 장에 몇 시간에서 하루 이상 걸린다.", "mask", "mask"],
+    ["가변 성형 빔", "Variable shaped beam", "VSB", "두 개의 조리개를 겹쳐 크기를 바꿀 수 있는 사각형 빔으로 한 샷씩 찍는 묘화 방식. 샷 수가 묘화 시간을 정하므로 OPC가 복잡해질수록 느려진다.", "mask", "mask"],
+    ["멀티빔 마스크 묘화기", "Multi-beam mask writer", "MBMW", "수십만 개의 가는 빔을 동시에 켜고 끄며 그리는 묘화기. 묘화 시간이 무늬의 복잡도와 거의 무관해 곡선 마스크와 EUV 마스크에 쓴다.", "mask", "mask", ["opc"]],
+    ["마스크 검사와 수리", "Mask inspection and repair", "", "완성된 마스크에서 결함을 찾아 고치는 일. 마스크 결함은 모든 샷에 되풀이되므로 하나도 남기지 않는 것이 원칙이다. EUV 마스크는 실제 노광 파장으로 보는 검사(actinic)를 쓴다.", "mask", "mask"],
+    ["반사형 마스크", "Reflective mask", "", "EUV에서 쓰는 마스크. 다층막 거울 위에 흡수체로 무늬를 만들고, 빛은 비스듬히 들어와 반사된다. 투과형과 달리 뒷면 전체를 정전 척으로 잡는다.", "mask", "euv", ["mask"]],
+    // OPC
+    ["광 근접 효과", "Optical proximity effect", "OPE", "같은 선폭으로 그린 무늬가 주변 무늬에 따라 다르게 찍히는 현상. 렌즈가 높은 차수의 회절광을 잘라 내기 때문에 생긴다. 조밀-고립 편차, 선 끝 줄어듦, 모서리 둥글어짐이 대표적이다.", "opc", "opc"],
+    ["광 근접 보정", "Optical proximity correction", "OPC", "찍힌 결과가 설계와 같아지도록 마스크 무늬를 미리 변형하는 기술. 가장자리를 조각으로 나누어 안팎으로 옮긴다. 마스크의 무늬는 설계와 다르게 생겼지만 웨이퍼의 무늬는 설계와 같아진다.", "opc", "opc"],
+    ["조밀-고립 편차", "Iso-dense bias", "", "같은 선폭의 밀집 선과 고립 선이 서로 다른 폭으로 찍히는 차이. 조명 조건에 따라 수십 nm에 이르기도 한다. OPC가 가장 먼저 보정하는 항목이다.", "opc", "opc"],
+    ["선 끝 줄어듦", "Line-end shortening", "LES", "선의 끝이 설계보다 안쪽으로 물러나 찍히는 현상. 좁은 선의 끝은 높은 공간 주파수를 많이 필요로 하는데 렌즈가 그것을 잘라 내기 때문이다. 비아와의 겹침 불량으로 이어진다.", "opc", "opc"],
+    ["모서리 둥글어짐", "Corner rounding", "", "직각 모서리가 둥글게 찍히는 현상. 날카로운 모서리는 무한히 높은 공간 주파수를 뜻하므로 완전히 없앨 수 없다. 세리프로 줄인다.", "opc", "opc"],
+    ["세리프", "Serif", "", "모서리 둥글어짐을 줄이려고 볼록한 모서리에 덧붙이거나 오목한 모서리에서 파내는 작은 사각형. 규칙 기반 OPC의 대표적 도형이다.", "opc", "opc"],
+    ["해머헤드", "Hammerhead", "", "선 끝 줄어듦을 보정하려고 선 끝을 망치 머리처럼 넓힌 도형. 선 끝을 그냥 늘이는 것보다 이웃과의 간격을 덜 줄인다.", "opc", "opc"],
+    ["해상 한계 이하 보조 패턴", "Sub-resolution assist feature", "SRAF", "주 패턴 옆에 두는, 스스로는 찍히지 않을 만큼 가는 보조 선. 고립 패턴의 회절을 밀집 패턴처럼 만들어 초점 심도를 넓힌다. 너무 굵으면 웨이퍼에 찍히는 것이 문제다. 산란 막대라고도 한다.", "opc", "opc"],
+    ["규칙 기반 OPC", "Rule-based OPC", "", "선폭과 간격에 따른 보정량을 표로 정해 두고 적용하는 OPC. 빠르지만 2차원적인 상황을 모두 표로 만들 수 없어 180 nm 세대 이후 모델 기반으로 넘어갔다.", "opc", "opc"],
+    ["모델 기반 OPC", "Model-based OPC", "", "광학·레지스트 모델로 찍힐 윤곽을 계산하고, 목표와의 차이가 줄어들도록 가장자리 조각을 되풀이해 옮기는 OPC. 칩 전체에 수십억 개의 조각을 계산한다.", "opc", "opc"],
+    ["가장자리 조각", "Fragment (edge segment)", "", "OPC가 따로 움직일 수 있게 도형의 가장자리를 나눈 짧은 구간. 조각이 짧을수록 보정은 정밀해지지만 계산량과 마스크 샷 수가 늘어난다.", "opc", "opc"],
+    ["가장자리 배치 오차", "Edge placement error", "EPE", "무늬의 가장자리가 있어야 할 자리에서 벗어난 거리. OPC에서는 목표 윤곽과 계산된 윤곽의 차이이고, 공정 제어에서는 CD 오차와 오버레이를 합친 최종 오차다.", "opc", "opc", ["overlay"]],
+    ["역 리소그래피", "Inverse lithography technology", "ILT", "원하는 웨이퍼 무늬에서 거꾸로 계산해 마스크 전체를 화소 단위로 최적화하는 기술. 결과는 곡선 형태의 주 패턴과 SRAF로 나오며 공정 윈도가 가장 넓다. 계산량과 마스크 묘화 시간이 부담이다.", "opc", "opc"],
+    ["곡선 마스크", "Curvilinear mask", "", "직각 도형이 아니라 곡선 윤곽으로 이루어진 마스크. ILT의 결과를 그대로 그린 것이며, 멀티빔 묘화기가 나오면서 실용화되었다.", "opc", "opc", ["mask"]],
+    ["PV 밴드", "Process variation band", "PV band", "초점·노광량·마스크 오차가 규격 범위에서 변할 때 윤곽이 움직이는 범위를 띠로 그린 것. 띠가 넓은 곳이 공정 변동에 약한 곳이다.", "opc", "opc", ["window"]],
+    ["핫스폿", "Hotspot", "", "공정 윈도 안에서도 끊어지거나 붙을 위험이 큰 레이아웃 위치. OPC 뒤 검증에서 찾아 설계나 보정을 고친다. 특정 모양에서 되풀이되는 계통 결함의 근원이다.", "opc", "opc"],
+    ["끝-끝 간격", "Tip-to-tip", "T2T", "한 줄 위에 놓인 두 선의 끝과 끝 사이 거리. 선 끝 줄어듦과 붙음 사이의 여유가 가장 좁은 곳이라 배선층의 핫스폿이 여기서 많이 나온다.", "opc", "opc", ["multipatterning"]],
+    // 레지스트
+    ["포토레지스트", "Photoresist", "PR", "빛을 받은 곳의 용해도가 바뀌는 감광성 고분자 막. 현상 뒤 남은 무늬가 식각이나 이온 주입의 마스크가 된다. 감광막이라고도 한다.", "resist", "resist"],
+    ["양성 레지스트", "Positive-tone resist", "", "빛을 받은 곳이 현상액에 녹는 레지스트. 마스크의 어두운 곳이 무늬로 남는다. 대부분의 층에서 쓰는 기본 방식이다.", "resist", "resist", ["develop"]],
+    ["음성 레지스트", "Negative-tone resist", "", "빛을 받은 곳이 남는 레지스트. 가교 반응이나 극성 변화로 용해도가 떨어진다. 금속 산화물 레지스트가 대표적인 음성이다.", "resist", "resist", ["develop"]],
+    ["화학 증폭형 레지스트", "Chemically amplified resist", "CAR", "빛이 만든 산 하나가 촉매로 작용해 수십~수백 번의 탈보호 반응을 일으키는 레지스트. 약한 광원으로도 충분한 감도를 얻는다. KrF 이후의 표준이다.", "resist", "resist"],
+    ["광산 발생제", "Photoacid generator", "PAG", "빛(EUV에서는 2차 전자)을 받아 강한 산을 내놓는 분자. 화학 증폭형 레지스트에서 잠상의 출발점이다.", "resist", "resist"],
+    ["소광제", "Quencher", "", "산을 중화하는 염기 성분. 어두운 곳으로 번져 온 소량의 산을 없애 잠상의 경계를 날카롭게 한다. 많이 넣으면 감도가 떨어진다.", "resist", "resist"],
+    ["탈보호 반응", "Deprotection", "", "산이 고분자의 보호기를 떼어 내 현상액에 녹는 형태로 바꾸는 반응. 노광 후 베이크 동안 일어나며 산은 소모되지 않고 다시 쓰인다.", "resist", "resist"],
+    ["소프트 베이크", "Post-apply bake", "PAB", "레지스트를 도포한 뒤 용매를 날려 막을 굳히는 열처리. 보통 90~130 °C에서 약 1분이다.", "resist", "resist"],
+    ["노광 후 베이크", "Post-exposure bake", "PEB", "노광 뒤 현상 전에 하는 열처리. 산이 확산하며 탈보호 반응을 일으킨다. 온도 1 °C 차이가 선폭을 nm 단위로 바꾸므로 가장 엄격하게 관리하는 단계다.", "resist", "resist", ["cd"]],
+    ["산 확산", "Acid diffusion", "", "노광 후 베이크 동안 산이 퍼지는 현상. 확산 길이만큼 잠상이 흐려져 대비와 NILS가 떨어진다. 반대로 정상파 무늬와 산탄 잡음을 평균해 주는 효과도 있다.", "resist", "resist", ["stochastic"]],
+    ["반사 방지막", "Bottom anti-reflective coating", "BARC", "레지스트 아래에 까는 흡수성 막. 기판에서 되돌아오는 빛을 줄여 정상파와 스윙 효과를 억제한다. 두께와 굴절률을 조절해 반사율을 1% 아래로 낮춘다.", "resist", "resist"],
+    ["정상파", "Standing wave", "", "입사광과 기판 반사광이 간섭해 레지스트 깊이 방향으로 생기는 밝고 어두운 줄무늬. 주기는 λ/(2n)이며 측벽에 물결 모양을 남긴다.", "resist", "resist"],
+    ["스윙 곡선", "Swing curve", "", "레지스트 두께에 따라 선폭이나 필요한 노광량이 주기적으로 출렁이는 곡선. 박막 간섭 때문이며 주기는 λ/(2n)이다. 단차 위에서 두께가 달라지면 선폭이 따라 변한다.", "resist", "resist"],
+    ["클리어 도즈", "Dose to clear", "E₀", "넓은 면적의 양성 레지스트가 바닥까지 완전히 녹는 최소 노광량. 레지스트 감도의 기준값이다.", "resist", "develop", ["resist"]],
+    ["레지스트 대비", "Resist contrast", "γ", "노광량의 로그에 대해 남는 두께가 변하는 기울기. 클수록 흐린 공간상을 날카로운 무늬로 바꾼다. 문턱 모델은 γ가 무한대인 경우다.", "resist", "develop"],
+    ["현상", "Development", "", "노광된 레지스트를 현상액으로 녹여 내는 단계. 양성 현상에는 2.38% TMAH 수용액을 쓴다. 이어지는 린스와 건조에서 패턴 붕괴가 일어난다.", "resist", "develop"],
+    ["음성 톤 현상", "Negative-tone development", "NTD", "양성 레지스트를 유기 용매로 현상해 빛을 받지 않은 곳을 녹이는 방식. 밝은 배경의 마스크로 트렌치와 홀을 찍을 수 있어 공간상이 좋아진다.", "resist", "develop"],
+    ["금속 산화물 레지스트", "Metal-oxide resist", "MOR", "주석 등 금속 산화물 클러스터로 만든 EUV용 음성 레지스트. EUV 흡수율이 높고 식각에 강해 얇은 막으로도 쓸 수 있다. 증착으로 입히는 건식 레지스트도 같은 계열이다.", "resist", "stochastic", ["resist"]],
+    ["측벽 각도", "Sidewall angle", "SWA", "레지스트 단면의 옆면이 바닥과 이루는 각도. 90°가 이상적이며, 흡수와 현상 특성에 따라 기울어진다.", "resist", "develop"],
+    ["종횡비", "Aspect ratio", "AR", "무늬의 높이를 폭으로 나눈 값. 레지스트 선은 대략 2~3을 넘으면 쓰러지기 쉽다. 선폭이 줄면 레지스트도 얇아져야 하는 이유다.", "resist", "develop", ["transfer"]],
+    ["패턴 붕괴", "Pattern collapse", "", "린스액이 마르면서 선 사이의 표면 장력이 선을 끌어당겨 쓰러뜨리는 현상. 응력이 종횡비의 제곱에 비례하고 간격에 반비례한다.", "resist", "develop"],
+    ["스컴", "Scum", "", "현상 뒤 녹아야 할 자리의 바닥에 얇게 남은 레지스트 찌꺼기. 노광량이 모자라거나 대비가 낮을 때 생기고, 식각에서 브리지로 이어진다. 약한 산소 플라스마(디스컴)로 없앤다.", "resist", "develop"],
+    ["푸팅", "Footing", "", "레지스트 선의 바닥이 발처럼 넓게 퍼진 모양. 기판이나 하부막의 염기 성분이 산을 중화할 때 생긴다. 반대로 바닥이 파이면 언더컷이다.", "resist", "develop"],
+    // 공정 제어
+    ["공정 윈도", "Process window", "PW", "선폭이 규격 안에 드는 초점과 노광량의 범위. 넓을수록 장비와 웨이퍼의 변동을 견딘다. 조명, 마스크, OPC를 고르는 최종 기준이다.", "control", "window"],
+    ["초점-노광량 행렬", "Focus-exposure matrix", "FEM", "한 웨이퍼의 필드마다 초점과 노광량을 단계적으로 바꿔 찍은 실험. 측정한 선폭으로 보성 곡선과 공정 윈도를 만든다.", "control", "window"],
+    ["보성 곡선", "Bossung curve", "", "노광량별로 선폭을 초점에 대해 그린 곡선. 곡선이 평평한 노광량(등초점 노광량)에서 초점에 가장 둔감하다. 곡선의 휘는 방향이 밀집과 고립에서 다르다.", "control", "window"],
+    ["노광량 여유도", "Exposure latitude", "EL", "선폭이 규격(보통 ±10%) 안에 머무는 노광량 범위를 중심값에 대한 %로 나타낸 것. NILS에 비례한다.", "control", "window"],
+    ["ED 윈도", "Exposure-defocus window", "", "노광량과 초점을 두 축으로 하고 규격을 만족하는 영역을 그린 것. 그 안에 들어가는 가장 큰 직사각형이나 타원의 크기로 초점 심도와 노광량 여유도를 함께 말한다.", "control", "window"],
+    ["겹침 윈도", "Overlapping process window", "", "여러 무늬(밀집, 고립, 선 끝)의 공정 윈도가 함께 만족되는 공통 영역. 한 층에는 여러 무늬가 섞여 있으므로 실제 여유는 이것이 정한다.", "control", "window"],
+    ["최적 초점", "Best focus", "", "선폭이나 대비가 극값이 되는 초점 위치. 보성 곡선의 꼭짓점이며, 무늬마다 조금씩 다르다.", "control", "window", ["focus"]],
+    ["CD 균일도", "CD uniformity", "CDU", "선폭이 필드 안, 웨이퍼 안, 웨이퍼 사이에서 흩어지는 정도. 보통 3σ로 적고 목표 선폭의 약 10% 이내가 예산이다.", "control", "cd"],
+    ["국부 CD 균일도", "Local CD uniformity", "LCDU", "수 µm 안에 이웃한 같은 무늬(특히 콘택 홀)의 크기 편차. 장비 변동으로는 설명되지 않고 확률적 효과가 지배한다.", "control", "cd", ["stochastic"]],
+    ["CD-SEM", "Critical-dimension scanning electron microscope", "CD-SEM", "낮은 가속 전압의 전자빔으로 무늬를 위에서 찍어 선폭을 재는 장비. 양산 CD 계측의 표준이다. 전자빔이 레지스트를 수축시키는 점에 주의한다.", "control", "cd"],
+    ["산란 계측", "Scatterometry / optical CD", "OCD", "주기 격자에서 반사된 빛의 스펙트럼을 모델과 맞춰 선폭, 높이, 측벽 각도를 구하는 계측. 빠르고 비파괴적이며 단면 정보까지 준다. 주기적인 전용 격자가 필요하다.", "control", "cd"],
+    ["선 가장자리 거칠기", "Line-edge roughness", "LER", "선의 한쪽 가장자리가 직선에서 벗어나 구불거리는 정도(3σ). 광자 산탄 잡음과 레지스트의 분자 크기, 산 확산이 원인이다.", "control", "cd", ["stochastic"]],
+    ["선폭 거칠기", "Line-width roughness", "LWR", "선을 따라 선폭이 변하는 정도(3σ). 두 가장자리가 무관하게 흔들리면 LER의 √2배다. 트랜지스터의 누설과 배선 저항의 편차로 이어진다.", "control", "cd"],
+    ["첨단 공정 제어", "Advanced process control", "APC", "계측 결과를 다음 로트의 노광량, 초점, 오버레이 보정값에 되먹이는 자동 제어. 장비의 느린 변동을 따라가며 지운다.", "control", "cd", ["overlay"]],
+    ["오버레이", "Overlay", "OVL", "현재 층의 무늬가 아래 층의 무늬에서 어긋난 거리. 최소 선폭의 대략 1/5~1/3이 예산이며 최선단에서는 약 2 nm 이하다.", "control", "overlay"],
+    ["정렬", "Alignment", "", "노광 직전에 웨이퍼 위의 마크 위치를 재서 웨이퍼의 위치와 변형을 알아내는 일. 그 결과로 스테이지 좌표를 보정해 찍는다. 오버레이는 찍은 뒤의 결과이고 정렬은 찍기 전의 동작이다.", "control", "overlay"],
+    ["정렬 마크", "Alignment mark", "", "스캐너의 정렬 센서가 읽는 격자 모양의 표식. 스크라이브 라인에 둔다. 식각과 CMP로 마크가 비대칭으로 변형되면 정렬 오차가 생긴다.", "control", "overlay"],
+    ["회절 기반 오버레이", "Diffraction-based overlay", "DBO", "위아래 층의 격자를 겹쳐 놓고 +1차와 −1차 회절광의 세기 차이로 어긋남을 재는 계측. 작은 마크로도 정밀도가 높다.", "control", "overlay"],
+    ["영상 기반 오버레이", "Image-based overlay", "IBO", "상자 속 상자 같은 마크를 현미경으로 찍어 두 층의 중심 차이를 재는 계측. 오래된 표준 방식이다.", "control", "overlay"],
+    ["보정 가능 성분", "Correctable", "", "오버레이 오차 중 이동, 회전, 배율처럼 모델로 표현되어 스캐너가 다음 노광에서 보정할 수 있는 부분.", "control", "overlay"],
+    ["잔차", "Residual", "", "모델로 보정하고도 남는 오버레이 오차. 줄이려면 모델의 차수를 높이거나 원인 공정을 고쳐야 한다. 실제 불량을 만드는 것은 이 부분이다.", "control", "overlay"],
+    ["고차 보정", "High-order correction", "HOWA / CPE", "웨이퍼 전체의 고차 다항식이나 필드별 보정값으로 오버레이를 맞추는 방법. 막 응력과 열처리로 생긴 웨이퍼 변형을 따라간다. 보정 항이 많을수록 계측 점도 많이 필요하다.", "control", "overlay"],
+    ["EPE 예산", "EPE budget", "", "가장자리 배치 오차를 오버레이, CD 균일도, 거칠기, OPC 잔차 등 원인별로 나눈 표. 각 항을 제곱합으로 더해 허용값(대략 선폭의 1/4)과 비교한다.", "control", "overlay", ["cd"]],
+    // EUV
+    ["극자외선", "Extreme ultraviolet", "EUV", "파장 13.5 nm의 빛. 모든 물질과 공기가 강하게 흡수하므로 렌즈를 쓰지 못하고 진공 속에서 거울로만 다룬다. 광자 하나의 에너지가 약 92 eV다.", "euv", "euv"],
+    ["레이저 생성 플라스마", "Laser-produced plasma", "LPP", "주석 액적에 CO₂ 레이저를 쏘아 만든 고온 플라스마에서 13.5 nm 빛을 얻는 광원. 중간 초점에서 250 W 이상을 낸다. 레이저 에너지의 수 %만 쓸 수 있는 EUV로 바뀐다.", "euv", "euv"],
+    ["주석 액적", "Tin droplet", "", "지름 약 25~30 µm의 녹은 주석 방울. 초당 약 5만 개를 쏘고, 약한 사전 펄스로 납작하게 편 뒤 주 펄스로 플라스마로 만든다.", "euv", "euv"],
+    ["집광 거울", "Collector", "", "플라스마가 사방으로 내는 EUV를 모아 중간 초점으로 보내는 큰 타원면 다층막 거울. 주석 부스러기로 오염되므로 수소 기체로 지킨다.", "euv", "euv"],
+    ["중간 초점", "Intermediate focus", "IF", "집광 거울이 빛을 모으는 점. 광원과 스캐너의 경계이며, 광원 출력은 여기서의 값으로 말한다.", "euv", "euv"],
+    ["다층막 거울", "Multilayer mirror", "", "서로 다른 두 물질을 수 nm 두께로 번갈아 쌓아 각 경계의 약한 반사가 같은 위상으로 더해지게 한 거울. EUV에서 최대 약 70%를 반사한다. 거울 10여 장을 지나면 빛의 약 2~3%만 남는다.", "euv", "euv"],
+    ["Mo/Si 다층막", "Mo/Si multilayer", "", "몰리브덴과 실리콘을 약 6.9 nm 주기로 40쌍쯤 쌓은 EUV 거울. 13.5 nm 근처의 좁은 파장대에서만 반사한다. 맨 위에는 루테늄 보호막을 올린다.", "euv", "euv"],
+    ["브래그 조건", "Bragg condition", "", "주기 구조의 각 층에서 반사된 빛이 보강 간섭하는 조건. mλ = 2d·cosθ. 입사각이 바뀌면 반사되는 파장이 바뀌므로 거울마다 주기를 달리 설계한다.", "euv", "euv"],
+    ["주광선 입사각", "Chief ray angle", "CRA", "EUV가 마스크에 들어오는 중심 각도. 반사형 마스크에서 입사광과 반사광을 분리하려면 비스듬히 넣어야 한다. NA 0.33 장비에서 6°다.", "euv", "euv"],
+    ["그림자 효과", "Shadowing", "", "비스듬히 들어온 EUV가 두꺼운 흡수체의 옆면에 가려지는 현상. 입사 방향에 수직인 선과 나란한 선의 선폭과 위치가 달라진다. OPC에서 방향별로 보정한다.", "euv", "euv", ["mask"]],
+    ["마스크 3D 효과", "Mask 3D effect", "M3D", "흡수체 두께가 파장보다 훨씬 커서 얇은 마스크 근사가 깨지는 현상. 그림자, 피치에 따른 최적 초점 이동, 대비 손실이 나타난다. 흡수체를 얇게 하거나 재료를 바꿔 줄인다.", "euv", "euv", ["mask"]],
+    ["플레어", "Flare", "", "거울 표면의 미세한 거칠기에 산란된 빛이 상 전체에 깔리는 배경광. 파장이 짧을수록 심해 EUV에서 수 %에 이른다. 주변의 무늬 밀도에 따라 달라지므로 OPC에서 보정한다.", "euv", "euv", ["opc"]],
+    ["산탄 잡음", "Photon shot noise", "", "광자가 띄엄띄엄 도착해 생기는 통계적 요동. 평균 N개가 도착하면 표준 편차는 √N이다. EUV 광자는 에너지가 커서 같은 노광량에서 개수가 ArF의 약 1/14이다.", "euv", "stochastic"],
+    ["확률적 결함", "Stochastic defect", "", "광자와 산 분자 수의 우연한 요동으로 선이 끊기거나, 이웃 선과 붙거나, 홀이 막히는 결함. 평균 조건이 정상이어도 낮은 확률로 생기고, 무늬 수가 수십억 개이므로 문제가 된다.", "euv", "stochastic"],
+    ["RLS 트레이드오프", "Resolution-LER-sensitivity trade-off", "RLS", "해상도, 가장자리 거칠기, 감도 셋을 동시에 좋게 할 수 없다는 관계. 감도를 높여 노광량을 줄이면 광자가 줄어 거칠기가 나빠진다.", "euv", "stochastic"],
+    ["2차 전자 번짐", "Secondary electron blur", "", "EUV 광자가 레지스트에서 만든 광전자와 2차 전자가 수 nm 퍼지며 반응을 일으키는 현상. EUV 레지스트에서 해상도 한계의 한 원인이다.", "euv", "stochastic", ["resist"]],
+    ["High-NA EUV", "High-NA EUV", "0.55 NA", "NA를 0.33에서 0.55로 올린 EUV 장비. 해상도가 약 1.7배 좋아져 하프 피치 약 8 nm까지 겨냥한다. 초점 심도가 얕아져 더 얇은 레지스트가 필요하다.", "euv", "stochastic", ["euv"]],
+    ["아나모픽 광학계", "Anamorphic optics", "", "방향에 따라 축소 배율이 다른 광학계. High-NA EUV는 스캔 방향 1/8, 수직 방향 1/4이다. 마스크 입사각을 키우지 않고 NA를 올리기 위한 선택이며, 필드가 26 × 16.5 mm로 절반이 된다.", "euv", "stochastic"],
+    ["중앙 차폐", "Central obscuration", "", "High-NA 투영 광학계의 마지막 거울 가운데에 뚫린 구멍 때문에 동공 중심부가 가려지는 것. 그 영역을 지나는 회절 차수는 상에 기여하지 못한다.", "euv", "stochastic"],
+    // 패터닝
+    ["패턴 전사", "Pattern transfer", "", "레지스트 무늬를 식각으로 아래 막에 옮기는 일. 레지스트 무늬는 임시 틀이고, 실제 회로는 전사된 막에 남는다.", "pattern", "transfer"],
+    ["하드마스크", "Hardmask", "HM", "레지스트 대신 식각을 견디는 무기막이나 탄소막. 얇은 레지스트의 무늬를 먼저 하드마스크로 옮기고, 그것으로 두꺼운 막을 깎는다.", "pattern", "transfer"],
+    ["삼층 구조", "Trilayer stack", "", "레지스트 / 실리콘 함유 반사 방지막 / 두꺼운 탄소막의 세 층. 서로 다른 식각 기체에서 선택비가 뒤집히는 것을 이용해 얇은 레지스트로 깊은 무늬를 만든다.", "pattern", "transfer"],
+    ["스핀 온 카본", "Spin-on carbon", "SOC", "삼층 구조의 맨 아래에 도포하는 두꺼운 탄소막. 단차를 평탄하게 메우고 산화막·질화막 식각의 마스크가 된다.", "pattern", "transfer"],
+    ["실리콘 함유 반사 방지막", "Silicon-containing ARC", "SiARC", "삼층 구조의 가운데 층. 반사 방지막이면서, 산소 플라스마에 견뎌 탄소막을 깎는 마스크가 된다.", "pattern", "transfer"],
+    ["선택비", "Selectivity", "", "깎으려는 막의 식각 속도를 마스크(또는 하부막)의 식각 속도로 나눈 값. 선택비 × 마스크 두께가 깎을 수 있는 깊이의 한계다.", "pattern", "transfer"],
+    ["이방성 식각", "Anisotropic etch", "", "수직 방향으로만 깎이는 식각. 이온이 수직으로 들어오고 측벽에는 보호막이 쌓여 무늬의 폭이 유지된다.", "pattern", "transfer"],
+    ["식각 바이어스", "Etch bias", "", "식각 뒤 선폭과 현상 뒤 레지스트 선폭의 차이. 무늬 밀도에 따라 달라지므로 OPC가 이 값까지 미리 보정한다.", "pattern", "transfer", ["opc"]],
+    ["트림", "Trim", "", "등방성 식각으로 레지스트나 맨드릴의 선폭을 일부러 줄이는 단계. 노광 해상도보다 가는 선을 만들 수 있지만 피치는 줄지 않는다.", "pattern", "transfer"],
+    ["다마신", "Damascene", "", "절연막에 트렌치를 먼저 파고 구리를 채운 뒤 CMP로 갈아 내어 배선을 만드는 방식. 금속을 직접 깎지 않으므로, 노광으로 찍는 것은 선이 아니라 트렌치다.", "pattern", "transfer"],
+    ["톤 반전", "Tone inversion", "", "남는 곳과 없어지는 곳을 뒤집는 공정. 기둥 무늬 사이를 다른 물질로 메우고 기둥을 빼내면 구멍이 된다. 찍기 쉬운 톤으로 노광하고 필요한 톤으로 바꾼다.", "pattern", "transfer", ["multipatterning"]],
+    ["멀티 패터닝", "Multiple patterning", "MP", "한 번의 노광으로 찍을 수 없는 피치를 여러 번의 노광이나 증착·식각으로 나눠 만드는 기술. 마스크 수와 공정 단계가 늘어나는 대가를 치른다.", "pattern", "multipatterning"],
+    ["LELE", "Litho-etch-litho-etch", "LELE", "노광과 식각을 두 번 되풀이해 무늬를 번갈아 끼워 넣는 방식. 두 무늬 사이의 오버레이 오차가 그대로 간격 오차가 된다.", "pattern", "multipatterning"],
+    ["색 분해", "Coloring (layout decomposition)", "", "한 층의 무늬를 여러 마스크로 나누어 배정하는 일. 가까운 이웃이 같은 마스크에 들어가지 않게 색칠하는 문제이며, 홀수 고리가 있으면 두 색으로 풀리지 않는다.", "pattern", "multipatterning"],
+    ["스티칭", "Stitching", "", "한 도형을 두 번의 노광으로 나누어 찍고 이어 붙이는 것. 색 분해의 충돌을 풀 때나, 필드가 절반인 High-NA EUV에서 큰 칩을 찍을 때 필요하다.", "pattern", "multipatterning", ["stochastic"]],
+    ["자기 정렬 이중 패터닝", "Self-aligned double patterning", "SADP", "맨드릴 양옆에 스페이서를 만들고 맨드릴을 없애 피치를 절반으로 만드는 방식. 간격이 오버레이가 아니라 막 두께로 정해져 정밀하다.", "pattern", "multipatterning"],
+    ["자기 정렬 사중 패터닝", "Self-aligned quadruple patterning", "SAQP", "SADP를 두 번 되풀이해 피치를 1/4로 만드는 방식. ArF 액침으로 피치 약 20 nm대까지 만든다.", "pattern", "multipatterning"],
+    ["맨드릴", "Mandrel", "", "스페이서를 붙이기 위해 먼저 만드는 심지 무늬. 스페이서가 생긴 뒤 제거된다. 맨드릴 선폭의 오차가 피치 워킹의 원인이다.", "pattern", "multipatterning"],
+    ["스페이서", "Spacer", "", "맨드릴 옆면에 등각 증착과 에치백으로 남긴 얇은 벽. 두께가 원자층 증착으로 정해지므로 선폭 균일도가 매우 좋다.", "pattern", "multipatterning"],
+    ["피치 워킹", "Pitch walking", "", "SADP·SAQP에서 이웃한 간격이 번갈아 넓고 좁게 되는 현상. 평균 피치는 맞지만 맨드릴 선폭이나 스페이서 두께가 목표에서 벗어나면 생긴다.", "pattern", "multipatterning"],
+    ["컷 마스크와 블록 마스크", "Cut mask / block mask", "", "스페이서로 만든 끝없는 선을 필요한 자리에서 끊는 마스크. 컷은 선을 만든 뒤 잘라 내고, 블록은 트렌치가 생기지 않게 미리 막는다.", "pattern", "multipatterning"],
+    // 스캐너
+    ["스캐너", "Scanner", "", "마스크와 웨이퍼를 반대 방향으로 함께 움직이며 좁은 슬릿으로 훑어 찍는 노광 장비. 렌즈의 가장 좋은 부분만 쓰므로 큰 필드를 고르게 찍는다.", "scanner", "overview"],
+    ["스테퍼", "Stepper", "", "한 필드를 한 번에 비추고 다음 필드로 옮겨 가는 노광 장비. 스캐너 이전의 방식이며 지금도 두꺼운 층이나 패키징에 쓴다.", "scanner", "overview"],
+    ["스텝 앤드 스캔", "Step-and-scan", "", "한 필드를 스캔으로 찍고 다음 필드로 이동(스텝)하기를 되풀이하는 동작. 웨이퍼 한 장에 약 100개 안팎의 필드를 찍는다.", "scanner", "overview"],
+    ["노광 필드", "Exposure field", "", "한 번의 스캔으로 찍는 영역. 최대 26 × 33 mm이며 그 안에 칩이 하나 이상 들어간다. 샷이라고도 한다.", "scanner", "overview"],
+    ["슬릿", "Slit", "", "스캐너가 한순간에 비추는 좁고 긴 영역. 폭 26 mm이고 스캔 방향으로 수 mm다. EUV에서는 호 모양이다.", "scanner", "overview"],
+    ["레티클 스테이지", "Reticle stage", "", "마스크를 잡고 움직이는 스테이지. 축소 배율이 1/4이므로 웨이퍼 스테이지보다 4배 빠르게, 반대 방향으로 움직인다.", "scanner", "overview"],
+    ["웨이퍼 스테이지", "Wafer stage", "", "웨이퍼를 잡고 nm 정밀도로 움직이는 스테이지. 자기 부상으로 떠서 움직이며 위치는 간섭계나 격자 인코더로 잰다.", "scanner", "overview", ["overlay"]],
+    ["투영 광학계", "Projection optics", "", "마스크의 상을 웨이퍼에 축소해 맺는 렌즈(또는 거울) 묶음. ArF는 수십 장의 렌즈, EUV는 6장 안팎의 거울로 이루어진다.", "scanner", "overview", ["focus"]],
+    ["레벨링", "Leveling", "", "노광 전에 웨이퍼 표면의 높이 지도를 재고, 스캔하는 동안 스테이지의 높이와 기울기를 맞춰 슬릿 안을 초점에 두는 동작.", "scanner", "focus"],
+    ["노광량", "Exposure dose", "mJ/cm²", "단위 면적에 넣는 빛 에너지. ArF 레지스트는 약 20~40, EUV는 약 30~80 mJ/cm²를 쓴다. 높일수록 거칠기는 좋아지지만 처리량이 떨어진다.", "scanner", "resist", ["stochastic"]],
+    ["처리량", "Throughput", "wph", "한 시간에 찍는 웨이퍼 수. ArF 액침은 약 300장, EUV는 약 150~200장이다. 광원 출력, 노광량, 스테이지 속도가 정한다.", "scanner", "overview", ["euv"]],
+    ["트랙", "Track (coater/developer)", "", "레지스트 도포, 베이크, 현상을 하는 장비. 스캐너에 붙어 한 줄로 동작한다.", "scanner", "resist", ["develop"]],
+    // 노드
+    ["피치", "Pitch", "", "되풀이되는 무늬의 한 주기(선폭 + 간격). 광학적 난이도를 정하는 것은 선폭이 아니라 피치다.", "node", "overview"],
+    ["하프 피치", "Half-pitch", "HP", "피치의 절반. 선과 간격이 1:1인 밀집 무늬의 선폭과 같다. 레일리 식의 CD는 이 값을 뜻한다.", "node", "overview", ["resolution"]],
+    ["임계 치수", "Critical dimension", "CD", "관리 대상이 되는 무늬의 폭. 선폭, 간격, 홀 지름 등이다. 보통 목표값의 ±10%가 규격이다.", "node", "overview", ["cd"]],
+    ["공정 노드", "Technology node", "", "공정 세대의 이름. 예전에는 게이트 길이나 하프 피치였지만 지금의 2 nm, 3 nm는 실제 치수가 아니라 세대 표시다. 실제 최소 피치는 20 nm 안팎이다.", "node", "nodes"],
+    ["게이트 피치", "Contacted poly pitch", "CPP", "콘택을 사이에 둔 게이트와 게이트 사이의 피치. 표준 셀의 가로 크기를 정한다. 2 nm급 로직에서 약 45~50 nm다.", "node", "nodes"],
+    ["금속 피치", "Minimum metal pitch", "MP", "가장 촘촘한 배선층의 피치. 표준 셀의 세로 크기를 정하고 노광이 가장 어려운 층이다. 2 nm급 로직에서 약 20~24 nm로 알려져 있다.", "node", "nodes"],
+    ["게이트 올 어라운드", "Gate-all-around", "GAA", "게이트가 채널을 사방에서 감싸는 트랜지스터. 나노시트 여러 장을 쌓아 만든다. 핀펫 다음 세대의 구조로 3 nm·2 nm급 로직에서 쓴다.", "node", "nodes"],
+    ["최소 선폭 F", "Minimum feature size", "F", "메모리에서 셀 크기를 재는 단위. 워드 라인이나 비트 라인의 하프 피치다. 셀 면적을 F²의 배수로 말한다.", "node", "nodes"],
+    ["6F² 셀", "6F² cell", "", "면적이 6F²인 DRAM 셀 배치. 활성 영역을 비스듬히 놓아 8F²보다 촘촘하게 만들었다. 현재 DRAM의 표준이다.", "node", "nodes"],
+    ["1c DRAM", "1c (6th-generation 10 nm-class) DRAM", "1c", "10 nm급 DRAM의 여섯 번째 세대(1x, 1y, 1z, 1a, 1b, 1c) 이름. 실제 하프 피치는 약 11~12 nm 수준으로 알려져 있고, 여러 층에 EUV를 쓴다.", "node", "nodes"],
+    ["벌집 커패시터", "Honeycomb capacitor array", "", "DRAM의 커패시터 기둥을 육각 격자로 촘촘히 배치한 구조. 홀을 육각 배열로 찍어야 하므로 국부 CD 균일도가 중요하다.", "node", "nodes", ["cd"]],
+  ].map((a) => ({ ko: a[0], en: a[1], abbr: a[2], def: a[3], cat: a[4], ch: a[5], also: a[6] || [] }));
+
+  /* =============================================================== 문제 은행 { ch, q, o:[4], a(정답 인덱스), e } */
+  const BANK = [
+    { ch: "overview", q: "레이아웃에서 식각 전사까지의 흐름에서 OPC가 놓이는 자리는?", o: ["레이아웃 다음, 마스크 제작 전", "노광 다음, 현상 전", "현상 다음, 식각 전", "마스크 제작 다음, 노광 전"], a: 0, e: "OPC는 설계 데이터를 마스크에 그리기 전에 미리 변형하는 단계다. 흐름은 레이아웃 → OPC → 마스크 → 노광 → 레지스트 → 현상 → 식각 전사다." },
+    { ch: "diffraction", q: "피치 28 nm 격자를 파장 13.5 nm, NA 0.33으로 수직 조명하면 어떻게 되는가?", o: ["±1차가 모두 동공에 들어와 대비가 가장 높다", "1차의 sinθ가 0.482로 NA보다 커서 0차만 통과하고 무늬가 생기지 않는다", "1차 회절광이 아예 전파하지 못한다", "0차가 사라지고 ±1차만 남는다"], a: 1, e: "sinθ = λ/p = 13.5/28 = 0.482로 NA 0.33보다 크다. 1차가 동공 밖으로 나가 0차만 남으므로 밝기만 전해지고 무늬는 없다. 전파 자체를 못 하는 것은 λ/p가 1을 넘는 ArF의 경우다." },
+    { ch: "resolution", q: "하프 피치 14 nm를 EUV(13.5 nm, NA 0.33)로 찍을 때의 k₁은 약 얼마인가?", o: ["약 0.10", "약 0.25", "약 0.34", "약 0.57"], a: 2, e: "k₁ = CD·NA/λ = 14 × 0.33 / 13.5 ≈ 0.342. 한계 0.25보다 위이므로 한 번의 노광으로 가능하지만 강한 비축 조명이 필요한 구간이다. 0.57은 NA 0.55일 때, 0.10은 ArF 액침일 때의 값이다." },
+    { ch: "resolution", q: "ArF 액침(193 nm, NA 1.35)이 한 번의 노광으로 찍을 수 있는 최소 피치는?", o: ["약 36 nm", "약 143 nm", "약 28 nm", "약 72 nm"], a: 3, e: "최소 피치는 λ/(2NA) = 193 / 2.7 ≈ 71.5 nm다. 하프 피치로는 약 36 nm이며, 이보다 촘촘한 무늬는 멀티 패터닝이나 EUV가 필요하다." },
+    { ch: "illumination", q: "쌍극 조명이 한 방향의 밀집 선에서 대비를 높이는 이유는?", o: ["광원의 총 밝기가 늘어나기 때문에", "0차를 동공 한쪽으로 치우치게 해 반대쪽에 1차가 함께 들어오게 하므로", "렌즈의 NA가 실제로 커지므로", "마스크의 위상을 180° 뒤집으므로"], a: 1, e: "비스듬히 비추면 0차가 동공 가장자리로 옮겨 가고, 수직 조명에서는 밖으로 나가던 1차가 반대쪽 가장자리로 들어온다. 두 빔이 광축에 대칭이면 초점에도 둔감하다." },
+    { ch: "focus", q: "같은 파장에서 NA를 두 배로 키우면 레일리 초점 심도는 어떻게 되는가?", o: ["1/4로 줄어든다", "1/2로 줄어든다", "변하지 않는다", "두 배로 늘어난다"], a: 0, e: "DOF = k₂·λ/NA²이므로 NA의 제곱에 반비례한다. 해상도는 NA에 비례해 좋아지지만 초점 심도는 더 빨리 줄어든다." },
+    { ch: "mask", q: "4배 축소 마스크에서 선폭 오차가 4 nm이고 MEEF가 3이면 웨이퍼의 선폭 오차는?", o: ["1 nm", "12 nm", "3 nm", "0.33 nm"], a: 2, e: "마스크 오차를 배율로 나누면 4/4 = 1 nm이고, 여기에 MEEF 3을 곱해 3 nm가 된다. MEEF가 1보다 크면 축소 투영의 이점이 그만큼 줄어든다." },
+    { ch: "opc", q: "SRAF(해상 한계 이하 보조 패턴)의 역할로 옳은 것은?", o: ["웨이퍼에 찍혀 배선의 일부가 된다", "마스크 묘화 시간을 줄인다", "레지스트의 감도를 높인다", "스스로는 찍히지 않으면서 고립 패턴의 회절을 밀집 패턴처럼 만들어 초점 심도를 넓힌다"], a: 3, e: "비축 조명은 밀집 피치에 맞춰져 있어 고립 패턴의 초점 심도가 좁다. SRAF를 옆에 두면 고립 패턴도 밀집처럼 회절한다. 굵게 넣으면 웨이퍼에 찍히므로 폭을 제한한다." },
+    { ch: "resist", q: "노광 후 베이크에서 산 확산 길이가 길어지면 생기는 일은?", o: ["잠상이 흐려져 대비와 NILS가 떨어진다", "정상파 무늬가 더 뚜렷해진다", "광자 산탄 잡음이 커진다", "필요한 노광량이 크게 늘어난다"], a: 0, e: "산이 퍼지는 만큼 공간상을 가우시안으로 번지게 한 것과 같다. 정상파와 잡음은 오히려 평균되어 줄지만, 번짐이 피치의 1/4쯤 되면 무늬가 사라진다." },
+    { ch: "resist", q: "레지스트 아래에 반사 방지막(BARC)을 까는 주된 목적은?", o: ["레지스트의 접착력을 높이려고", "식각 선택비를 높이려고", "기판 반사를 줄여 정상파와 스윙 효과를 억제하려고", "산 확산을 막으려고"], a: 2, e: "193 nm에서 실리콘 위 레지스트는 기판 쪽 반사율이 약 0.57에 이른다. BARC가 이를 수 % 아래로 낮춰 깊이 방향 줄무늬와 두께에 따른 선폭 출렁임을 없앤다." },
+    { ch: "develop", q: "선폭과 간격은 그대로 두고 레지스트 두께를 두 배로 하면 패턴 붕괴를 일으키는 응력은?", o: ["그대로다", "약 2배", "약 4배", "약 1/2"], a: 2, e: "붕괴 응력은 종횡비(H/W)의 제곱에 비례한다. 두께가 두 배면 응력은 네 배다. 선폭이 줄수록 레지스트를 얇게 써야 하고, 그래서 하드마스크가 필요해진다." },
+    { ch: "window", q: "보성 곡선(Bossung curve)은 무엇을 그린 것인가?", o: ["레지스트 두께에 따른 선폭", "노광량별로 초점에 따른 선폭", "피치에 따른 대비", "파장에 따른 반사율"], a: 1, e: "초점을 가로축, 선폭을 세로축으로 하고 노광량마다 한 줄씩 그린다. 초점-노광량 행렬 실험에서 얻으며, 여기서 ED 윈도를 만든다. 두께에 따른 선폭은 스윙 곡선이다." },
+    { ch: "cd", q: "선의 두 가장자리가 서로 무관하게 흔들릴 때 LWR과 LER의 관계는?", o: ["LWR = LER", "LWR = 2 × LER", "LWR = LER / 2", "LWR = √2 × LER"], a: 3, e: "선폭은 두 가장자리 위치의 차이이므로 분산이 더해진다. 표준 편차는 √2배가 된다. 스페이서 패터닝처럼 두 가장자리가 함께 움직이면 LWR은 이보다 작다." },
+    { ch: "overlay", q: "오버레이 오차에서 ‘잔차’가 뜻하는 것은?", o: ["이동, 회전, 배율 같은 모델로 보정하고도 남는 오차", "스캐너가 다음 노광에서 지울 수 있는 오차", "정렬 마크를 읽기 전의 웨이퍼 위치 오차", "마스크 묘화에서 생긴 선폭 오차"], a: 0, e: "모델로 표현되는 부분은 보정 가능 성분이고 스캐너가 되먹임으로 지운다. 남는 잔차가 실제 불량을 만들며, 고차 보정이나 원인 공정의 개선으로만 줄어든다." },
+    { ch: "euv", q: "EUV 노광이 렌즈 대신 거울을, 공기 대신 진공을 쓰는 이유는?", o: ["13.5 nm 빛은 모든 물질과 기체에 강하게 흡수되므로", "거울이 렌즈보다 값이 싸므로", "진공에서 빛의 속도가 빨라지므로", "거울의 NA가 렌즈보다 크므로"], a: 0, e: "투과시킬 재료가 없으므로 굴절 렌즈를 만들 수 없다. Mo/Si 다층막의 브래그 반사만이 쓸 만한 반사율(약 70%)을 준다. 마스크도 반사형이 된다." },
+    { ch: "euv", q: "반사율 70%인 거울을 11번 거치면 처음 빛의 약 얼마가 남는가?", o: ["약 30%", "약 2%", "약 10%", "약 0.1%"], a: 1, e: "0.7을 11번 곱하면 약 0.02다. 광원이 250 W를 내도 웨이퍼에 닿는 것은 몇 W뿐이다. EUV 광원 출력이 처리량을 정하는 이유다." },
+    { ch: "stochastic", q: "같은 노광량(mJ/cm²)일 때 EUV의 광자 수는 ArF와 비교해 어떠한가?", o: ["약 14배 많다", "같다", "약 1/2이다", "약 1/14이다"], a: 3, e: "광자 하나의 에너지가 파장에 반비례하므로 개수는 파장에 비례한다. 13.5/193 ≈ 1/14. 광자가 적으니 상대 요동(1/√N)이 커서 거칠기와 확률적 결함이 문제가 된다." },
+    { ch: "transfer", q: "두께 30 nm의 얇은 레지스트로 깊은 트렌치를 만들 수 있는 방법은?", o: ["노광량을 크게 올린다", "현상 시간을 늘린다", "삼층 구조와 하드마스크로 선택비가 높은 막에 차례로 옮긴다", "레지스트를 다시 두껍게 바른다"], a: 2, e: "레지스트 → SiARC → 탄소막 → 대상 막으로 옮길 때마다 식각 기체를 바꿔 높은 선택비를 얻는다. 얇은 무늬가 단계마다 더 두꺼운 마스크로 바뀐다." },
+    { ch: "multipatterning", q: "맨드릴 피치 112 nm에서 SAQP를 하면 최종 피치는?", o: ["56 nm", "28 nm", "14 nm", "224 nm"], a: 1, e: "SADP가 피치를 절반(56 nm)으로, 이를 한 번 더 되풀이한 SAQP가 1/4(28 nm)로 만든다. ArF 액침으로 찍을 수 있는 112 nm에서 출발해 EUV급 피치에 이르는 방법이다." },
+    { ch: "nodes", q: "‘2 nm 공정’이라는 이름에 대한 설명으로 옳은 것은?", o: ["가장 작은 배선의 선폭이 2 nm다", "게이트 길이가 2 nm다", "금속 피치가 2 nm다", "세대를 나타내는 이름이고, 실제 최소 금속 피치는 20 nm 안팎이다"], a: 3, e: "노드 이름은 더 이상 특정 치수와 대응하지 않는다. 2 nm급 로직의 게이트 피치는 약 45~50 nm, 최소 금속 피치는 약 20~24 nm로 알려져 있다." },
+  ];
+
+  /* =============================================================== 공통 */
+  const CH = {}, ORDER = {};
+  LB.CHAPTERS.forEach((c, i) => { CH[c.slug] = c; ORDER[c.slug] = i; });
+  const CATS = { optics: "광학", mask: "마스크", opc: "OPC", resist: "레지스트", control: "공정 제어", euv: "EUV", pattern: "패터닝", scanner: "스캐너", node: "노드" };
+  const CAT_ORDER = Object.keys(CATS);
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const SUB = { "₀": "0", "₁": "1", "₂": "2", "²": "2" };
+  const norm = (s) => String(s).toLowerCase().replace(/[₀₁₂²]/g, (c) => SUB[c]).replace(/[\s\-·_/()‘’'.,]/g, "");
+  function hl(text, q) {
+    if (!q) return esc(text);
+    const i = text.toLowerCase().indexOf(q);
+    if (i < 0) return esc(text);
+    return esc(text.slice(0, i)) + "<mark>" + esc(text.slice(i, i + q.length)) + "</mark>" + esc(text.slice(i + q.length));
+  }
+  function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+
+  /* =============================================================== 용어집 */
+  const CHO = ["ㄱ", "ㄲ", "ㄴ", "ㄷ", "ㄸ", "ㄹ", "ㅁ", "ㅂ", "ㅃ", "ㅅ", "ㅆ", "ㅇ", "ㅈ", "ㅉ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ"];
+  const MERGE = { "ㄲ": "ㄱ", "ㄸ": "ㄷ", "ㅃ": "ㅂ", "ㅆ": "ㅅ", "ㅉ": "ㅈ" };
+  function initial(s) {
+    const c = s.charCodeAt(0);
+    if (c >= 0xac00 && c <= 0xd7a3) { const j = CHO[Math.floor((c - 0xac00) / 588)]; return MERGE[j] || j; }
+    return /[0-9]/.test(s[0]) ? "0–9" : "A–Z";
+  }
+  const gOrd = (g) => { const i = CHO.indexOf(g); return i >= 0 ? i : g === "A–Z" ? 100 : 101; };
+  TERMS.forEach((t, i) => { t.id = i; t._key = norm(t.ko + " " + t.en + " " + t.abbr); t._def = norm(t.def); t._ini = initial(t.ko); });
+
+  const qEl = $("gl-q"), listEl = $("gl-list"), countEl = $("gl-count");
+  const catSel = LB.seg("gl-cat", renderGlossary), sortSel = LB.seg("gl-sort", renderGlossary);
+  qEl.addEventListener("input", renderGlossary);
+
+  function renderGlossary() {
+    const raw = qEl.value.trim(), q = norm(raw), qLow = raw.toLowerCase(), cat = catSel(), mode = sortSel();
+    const items = TERMS.filter((t) => {
+      if (cat !== "all" && t.cat !== cat) return false;
+      return !q || t._key.indexOf(q) >= 0 || t._def.indexOf(q) >= 0;
+    });
+    const rank = (t) => (q && t._key.indexOf(q) < 0 ? 1 : 0);
+    items.sort((a, b) => {
+      if (mode === "ch") { const d = ORDER[a.ch] - ORDER[b.ch]; if (d) return d; }
+      else if (mode === "cat") { const d = CAT_ORDER.indexOf(a.cat) - CAT_ORDER.indexOf(b.cat); if (d) return d; }
+      else { const r = rank(a) - rank(b); if (r) return r; const g = gOrd(a._ini) - gOrd(b._ini); if (g) return g; }
+      return a.ko.localeCompare(b.ko, "ko");
+    });
+    countEl.textContent = items.length + " / " + TERMS.length + "개 용어";
+    if (!items.length) { listEl.innerHTML = `<div class="gl-empty">“${esc(raw)}”에 해당하는 용어가 없다. 영어나 약어로도 검색해 보자.</div>`; return; }
+    const html = [];
+    let last = null;
+    items.forEach((t) => {
+      const g = mode === "ch" ? t.ch : mode === "cat" ? t.cat : q && rank(t) ? "정의 본문 일치" : t._ini;
+      if (g !== last) { last = g; html.push(`<div class="gl-group">${mode === "ch" ? "Ch." + CH[g].num + " · " + esc(CH[g].title) : mode === "cat" ? CATS[g] : esc(g)}</div>`); }
+      const links = [t.ch].concat(t.also).map((s, i) => `<a class="ch" href="${s}.html">${i ? "함께 보기 · Ch." + CH[s].num : "→ Ch." + CH[s].num + " " + esc(CH[s].title)}</a>`).join("");
+      html.push(`<div class="gl-item" id="term-${t.id}"><h4>${hl(t.ko, qLow)}<span class="en">${hl(t.en, qLow)}</span>${t.abbr ? `<span class="abbr">${hl(t.abbr, qLow)}</span>` : ""}</h4><p>${hl(t.def, qLow)}</p><span class="cat">${CATS[t.cat]}</span>${links}</div>`);
+    });
+    listEl.innerHTML = html.join("");
+    listEl.scrollTop = 0;
+  }
+  renderGlossary();
+
+  /* =============================================================== k₁ 계산기 */
+  const SC = LT.SCANNERS, SC_KEYS = Object.keys(SC);
+  $("calc-sc").innerHTML = SC_KEYS.map((k) => `<button data-value="${k}"${k === "euv" ? ' class="on"' : ""}>${esc(SC[k].name)}</button>`).join("");
+  $("sc-body").innerHTML = SC_KEYS.map((k) => {
+    const s = SC[k];
+    return `<tr><td>${esc(s.name)}</td><td class="num">${s.wl}</td><td class="num">${s.na}</td><td class="num">${LB.fmt(s.wl / (4 * s.na), 3)} nm</td><td class="num">${s.k1min}</td><td class="num">${LB.fmt((s.k1min * s.wl) / s.na, 2)} nm</td><td class="num">${s.year}</td></tr>`;
+  }).join("");
+
+  const hpOf = (v) => { const x = Math.pow(10, v); return x < 20 ? Math.round(x * 2) / 2 : x < 100 ? Math.round(x) : Math.round(x / 5) * 5; };
+  let calcCv = null;
+  const redrawCalc = () => { if (calcCv) calcCv.redraw(); };
+  const naGet = LB.range("calc-na", (v) => v.toFixed(2), redrawCalc);
+  const hpGet = LB.range("calc-hp", (v) => hpOf(v) + " nm", redrawCalc);
+  const scGet = LB.seg("calc-sc", (k) => {
+    naGet.el.max = SC[k].nMedium > 1 ? 1.35 : 0.95;
+    naGet.set(SC[k].na);
+  });
+
+  function calcState() {
+    const s = SC[scGet()], na = naGet(), hp = hpOf(hpGet()), wl = s.wl;
+    const n = na >= 1 || s.nMedium > 1 ? 1.44 : 1;
+    const k1 = (hp * na) / wl, pmin = wl / (2 * na);
+    const dof = wl / (2 * n * (1 - Math.sqrt(1 - (na / n) ** 2)));
+    return { s, na, hp, wl, k1, pmin, dof, sep: wl / (2 * hp * na) };
+  }
+  function verdict(k1) {
+    if (k1 < 0.25) return ["bad-t", "한 번 노광으로는 불가능"];
+    if (k1 < 0.3) return ["warn-t", "한계 근처: 쌍극·SMO·강한 OPC"];
+    if (k1 < 0.4) return ["ok-t", "양산 가능: 비축 조명 + OPC"];
+    if (k1 < 0.6) return ["ok-t", "여유 있음: 가벼운 OPC"];
+    return ["ok-t", "쉽다: 보정이 거의 필요 없다"];
+  }
+  function drawCalc(ctx, w, h) {
+    const P = LB.palette(), c = calcState(), stack = w < 480;
+    const pw = stack ? w : Math.min(w * 0.46, 300), ph = stack ? 210 : h;
+    // 동공
+    const cx = pw / 2, cy = ph / 2 + 8, R = Math.min(pw * 0.26, ph * 0.32);
+    ctx.font = LB.font(12); ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillStyle = P.dim; ctx.fillText("렌즈 동공 (반지름 = NA)", cx, 14);
+    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2);
+    ctx.fillStyle = P.surface; ctx.fill(); ctx.strokeStyle = P.axis; ctx.lineWidth = 1.5; ctx.stroke();
+    ctx.setLineDash([3, 3]); ctx.strokeStyle = P.grid; ctx.beginPath(); ctx.moveTo(cx - R, cy); ctx.lineTo(cx + R, cy); ctx.moveTo(cx, cy - R); ctx.lineTo(cx, cy + R); ctx.stroke(); ctx.setLineDash([]);
+    const half = c.sep / 2, inside = half <= 1, lim = (pw / 2 - 14) / R, dx = Math.min(half, lim) * R;
+    const col = inside ? P.accent : P.bad;
+    ctx.strokeStyle = col; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(cx - dx, cy); ctx.lineTo(cx + dx, cy); ctx.stroke();
+    [[-1, "0차"], [1, "1차"]].forEach(([sg, name]) => {
+      ctx.beginPath(); ctx.arc(cx + sg * dx, cy, 7, 0, Math.PI * 2); ctx.fillStyle = col; ctx.fill();
+      ctx.fillStyle = P.text; ctx.font = LB.font(12, false, 700); ctx.fillText(name, cx + sg * dx, cy - 18);
+    });
+    ctx.font = LB.font(12); ctx.fillStyle = inside ? P.dim : P.bad;
+    ctx.fillText(inside ? "두 차수가 함께 들어온다" : "두 차수가 함께 들어오지 못한다", cx, cy + R + 16);
+    ctx.font = LB.font(11.5, true); ctx.fillStyle = P.dim;
+    ctx.fillText("λ/(p·NA) = " + c.sep.toFixed(2) + (inside ? " ≤ 2" : " > 2"), cx, cy + R + 34);
+    // k₁ 눈금
+    const gx = stack ? 18 : pw + 14, gw = (stack ? w : w - pw) - 36, gy = stack ? ph + 46 : h / 2 - 4, gh = 22, kMax = 1;
+    const X = (k) => gx + (Math.min(k, kMax) / kMax) * gw;
+    ctx.textAlign = "left"; ctx.font = LB.font(12); ctx.fillStyle = P.dim;
+    ctx.fillText("k₁ = 하프 피치 × NA / λ", gx, gy - 40);
+    [[0, 0.25, P.bad], [0.25, 0.3, P.warn], [0.3, 1, P.ok]].forEach(([a, b, color]) => {
+      ctx.globalAlpha = 0.3; ctx.fillStyle = color; ctx.fillRect(X(a), gy, X(b) - X(a), gh); ctx.globalAlpha = 1;
+    });
+    ctx.strokeStyle = P.border; ctx.lineWidth = 1; ctx.strokeRect(gx, gy, gw, gh);
+    ctx.textAlign = "center"; ctx.font = LB.font(11, true); ctx.fillStyle = P.dim;
+    [0, 0.25, 0.5, 0.75, 1].forEach((k) => { ctx.fillRect(X(k) - 0.5, gy + gh, 1, 4); ctx.fillText(k === 1 ? "1+" : String(k), X(k), gy + gh + 14); });
+    const mx = X(c.k1), v = verdict(c.k1), mc = v[0] === "bad-t" ? P.bad : v[0] === "warn-t" ? P.warn : P.ok;
+    ctx.fillStyle = P.text; ctx.beginPath(); ctx.moveTo(mx, gy - 2); ctx.lineTo(mx - 6, gy - 12); ctx.lineTo(mx + 6, gy - 12); ctx.closePath(); ctx.fill();
+    ctx.fillRect(mx - 1, gy, 2, gh);
+    ctx.font = LB.font(15, true, 700); ctx.fillStyle = mc;
+    ctx.textAlign = mx < gx + 30 ? "left" : mx > gx + gw - 30 ? "right" : "center";
+    ctx.fillText(c.k1.toFixed(3), mx < gx + 30 ? gx : mx > gx + gw - 30 ? gx + gw : mx, gy - 23);
+    ctx.textAlign = "left"; ctx.font = LB.font(12); ctx.fillStyle = P.dim;
+    ctx.fillText("피치 " + c.hp * 2 + " nm · 한계 피치 " + LB.fmt(c.pmin, 3) + " nm", gx, gy + gh + 36);
+
+    LB.stat("calc-o-wl", c.wl + " nm");
+    LB.stat("calc-o-k1", c.k1.toFixed(3));
+    LB.stat("calc-o-pmin", LB.fmt(c.pmin, 3) + " nm");
+    LB.stat("calc-o-dof", "약 " + LB.fmt(c.dof, 2) + " nm");
+    LB.stat("calc-o-v", `<span class="${v[0]}">${v[1]}</span>`);
+  }
+  calcCv = LB.canvas("#calc-cv", drawCalc, { get height() { return $("calc-cv").parentElement.clientWidth < 480 ? 330 : 250; } });
+
+  /* =============================================================== 종합 퀴즈 */
+  const QN = BANK.length;
+  const fq = { order: [], i: 0, score: 0, answered: false, results: [] };
+  function startQuiz() {
+    fq.order = shuffle(BANK.map((_, i) => i)).map((qi) => ({ qi, perm: shuffle(BANK[qi].o.map((_, k) => k)) }));
+    fq.i = 0; fq.score = 0; fq.results = [];
+    $("fq-card").hidden = false; $("fq-result").hidden = true;
+    showQ();
+  }
+  function showQ() {
+    const item = fq.order[fq.i], Q = BANK[item.qi], c = CH[Q.ch];
+    fq.answered = false;
+    $("fq-count").textContent = "문제 " + (fq.i + 1) + " / " + QN;
+    $("fq-score").textContent = "정답 " + fq.score + " / " + fq.i;
+    $("fq-fill").style.width = (fq.i / QN) * 100 + "%";
+    $("fq-ch").textContent = "Ch." + c.num + " · " + c.title;
+    $("fq-q").textContent = Q.q;
+    const box = $("fq-opts");
+    box.innerHTML = "";
+    item.perm.forEach((k, n) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "fq-opt"; b.dataset.k = k;
+      b.innerHTML = `<span class="n">${String.fromCharCode(65 + n)}</span><span>${esc(Q.o[k])}</span>`;
+      b.addEventListener("click", () => answer(k));
+      box.appendChild(b);
+    });
+    $("fq-exp").hidden = true;
+    $("fq-next").hidden = true;
+  }
+  function answer(k) {
+    if (fq.answered) return;
+    fq.answered = true;
+    const Q = BANK[fq.order[fq.i].qi], ok = k === Q.a, c = CH[Q.ch];
+    if (ok) fq.score++;
+    fq.results.push({ ch: Q.ch, ok });
+    $("fq-opts").querySelectorAll(".fq-opt").forEach((b) => {
+      const bk = Number(b.dataset.k);
+      b.disabled = true;
+      if (bk === Q.a) b.classList.add("right");
+      else if (bk === k) b.classList.add("wrong");
+    });
+    const exp = $("fq-exp");
+    exp.innerHTML = (ok ? '<b class="ok">정답.</b> ' : '<b class="bad">오답.</b> ') + esc(Q.e) + ` <a href="${Q.ch}.html">→ Ch.${c.num} ${esc(c.title)} 복습</a>`;
+    exp.hidden = false;
+    $("fq-score").textContent = "정답 " + fq.score + " / " + (fq.i + 1);
+    $("fq-fill").style.width = ((fq.i + 1) / QN) * 100 + "%";
+    const nx = $("fq-next");
+    nx.textContent = fq.i + 1 < QN ? "다음 문제 →" : "결과 보기 →";
+    nx.hidden = false;
+    nx.focus({ preventScroll: true });
+  }
+  $("fq-next").addEventListener("click", () => {
+    if (!fq.answered) return;
+    if (fq.i + 1 < QN) { fq.i++; showQ(); } else showResult();
+  });
+  $("fq-retry").addEventListener("click", () => {
+    startQuiz();
+    $("final-quiz").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  const RANKS = [
+    [0, "견습 엔지니어", "레일리 식과 회절 차수부터 다시 잡자. 2장과 3장의 시뮬레이터를 만져 보면 나머지가 제자리를 찾는다."],
+    [8, "공정 엔지니어", "뼈대는 잡혔다. 틀린 문제의 장으로 돌아가 시뮬레이터를 끝까지 밀어 무너지는 모습을 다시 보자."],
+    [14, "리소 엔지니어", "레이아웃에서 전사까지 흐름을 꿰고 있다. 18장 실험실에서 LB-28을 처음부터 끝까지 직접 돌려 보자."],
+    [18, "수석 리소그래퍼", "k₁ 0.25의 벽 앞에서도 길을 찾을 수준이다. 18장 실험실에서 자기 레이아웃을 그려 한계를 시험해 보자."],
+  ];
+  function showResult() {
+    $("fq-card").hidden = true;
+    $("fq-result").hidden = false;
+    $("fq-fill").style.width = "100%";
+    $("fq-count").textContent = "완료";
+    const s = fq.score;
+    let rank = RANKS[0];
+    RANKS.forEach((r) => { if (s >= r[0]) rank = r; });
+    $("fq-title").textContent = rank[1];
+    $("fq-big").innerHTML = s + "<small> / " + QN + "</small>";
+    $("fq-msg").textContent = "정답률 " + Math.round((s / QN) * 100) + " % · " + rank[2];
+    $("fq-dots").innerHTML = fq.results.map((r, i) => `<a class="${r.ok ? "ok" : "bad"}" href="${r.ch}.html" title="Ch.${CH[r.ch].num} ${esc(CH[r.ch].title)}">${i + 1}</a>`).join("");
+    const weak = LB.CHAPTERS.filter((c) => fq.results.some((r) => r.ch === c.slug && !r.ok));
+    $("fq-review").innerHTML = weak.length
+      ? "다시 볼 장: " + weak.map((c) => `<a href="${c.slug}.html">Ch.${c.num} ${esc(c.title)}</a>`).join(" · ")
+      : "모든 문제를 맞혔다. 18장 리소 실험실에서 직접 패턴을 찍어 보자.";
+    $("fq-result").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+  startQuiz();
+})();
+</script>
+</body>
+</html>
