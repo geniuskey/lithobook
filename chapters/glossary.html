@@ -145,13 +145,13 @@
       <div class="fx"><h4>초점 심도 <a href="focus.html">→ 5장</a></h4>
         <div class="formula">$$\mathrm{DOF} = k_2\,\frac{\lambda}{\mathrm{NA}^2}$$<div class="where">NA가 큰 경우에는 \(k_2\,\lambda / \bigl(2n(1-\cos\theta)\bigr)\), \(\sin\theta = \mathrm{NA}/n\).</div></div></div>
       <div class="fx"><h4>격자 방정식 <a href="diffraction.html">→ 2장</a></h4>
-        <div class="formula">$$\sin\theta_m = \sin\theta_i + m\,\frac{\lambda}{p}$$<div class="where">\(m\)은 회절 차수, \(\theta_i\)는 입사각. \(|\sin\theta_m| \le \mathrm{NA}\)인 차수만 렌즈를 통과한다.</div></div></div>
+        <div class="formula">$$n_o\sin\theta_m = n_i\sin\theta_i + m\,\frac{\lambda}{p}$$<div class="where">\(m\)은 회절 차수, \(\theta_i\)는 입사각, \(n_i,n_o\)는 입사·출사 매질의 굴절률, \(\lambda\)는 진공 파장이다. 같은 매질이면 두 굴절률이 같고 공기·진공에서는 1이다. \(n_o|\sin\theta_m| \le \mathrm{NA}\)인 전파 차수만 렌즈를 통과한다.</div></div></div>
       <div class="fx"><h4>차단 피치 <a href="illumination.html">→ 4장</a></h4>
         <div class="formula">$$p_{\min} = \frac{\lambda}{\mathrm{NA}\,(1+\sigma)}$$<div class="where">\(\sigma = 0\)이면 \(\lambda/\mathrm{NA}\), \(\sigma = 1\)이면 \(\lambda/(2\mathrm{NA})\). 쌍극의 이상적 위치는 \(\sigma = \lambda/(2p\,\mathrm{NA})\).</div></div></div>
       <div class="fx"><h4>NILS <a href="resolution.html">→ 3장</a></h4>
         <div class="formula">$$\mathrm{NILS} = w\,\left.\frac{d\ln I}{dx}\right|_{\text{edge}}$$<div class="where">\(w\)는 목표 선폭, \(I\)는 공간상 세기. 대략 2 이상이면 양산할 만하고 1.5 아래는 어렵다.</div></div></div>
       <div class="fx"><h4>대비 <a href="diffraction.html">→ 2장</a></h4>
-        <div class="formula">$$C = \frac{I_{\max}-I_{\min}}{I_{\max}+I_{\min}}$$<div class="where">두 빔 간섭에서는 \(\mathrm{NILS} = 2\pi C\,w/p\). 선과 간격이 1:1이면 \(\pi C\)다.</div></div></div>
+        <div class="formula">$$C = \frac{I_{\max}-I_{\min}}{I_{\max}+I_{\min}}$$<div class="where">정현파 두 빔 간섭에서 선과 간격이 1:1이고 경계가 평균 세기에 놓이면 \(w=p/2\)이므로 \(\mathrm{NILS}=\pi C\)다. 다른 경계에서는 위의 경계 미분 정의로 계산한다.</div></div></div>
       <div class="fx"><h4>MEEF <a href="mask.html">→ 6장</a></h4>
         <div class="formula">$$\mathrm{MEEF} = \frac{\partial\,\mathrm{CD}_{\text{wafer}}}{\partial\,(\mathrm{CD}_{\text{mask}}/M)}$$<div class="where">\(M\)은 축소 배율(4). 1이면 마스크 오차가 그대로, k₁이 작을수록 3~5까지 커진다.</div></div></div>
       <div class="fx"><h4>면적당 광자 수 <a href="stochastic.html">→ 14장</a></h4>
@@ -245,7 +245,7 @@
     // 광학
     ["회절", "Diffraction", "", "빛이 마스크의 좁은 틈을 지나며 여러 방향으로 퍼지는 현상. 무늬가 촘촘할수록 더 큰 각도로 퍼진다. 노광의 해상도 한계는 모두 여기서 나온다.", "optics", "diffraction"],
     ["회절 차수", "Diffraction order", "", "주기적인 무늬를 지난 빛이 갈라져 나가는 띄엄띄엄한 방향들. 곧게 나가는 0차와 양옆의 ±1차, ±2차…로 번호를 붙인다. 0차만으로는 밝기만 전해지고, 적어도 두 차수가 만나 간섭해야 무늬가 생긴다.", "optics", "diffraction"],
-    ["격자 방정식", "Grating equation", "", "피치 p인 격자에서 m차 회절광의 방향을 주는 식. sinθ = sinθᵢ + mλ/p. 피치가 파장보다 작으면 1차 회절광은 수직 입사에서 아예 전파하지 못한다.", "optics", "diffraction"],
+    ["격자 방정식", "Grating equation", "", "피치 p인 격자에서 m차 회절광의 방향을 주는 식. n_o sinθ = n_i sinθᵢ + mλ/p(λ는 진공 파장). 수직 입사에서 p < λ/n_o이면 1차 회절광은 전파하지 못한다.", "optics", "diffraction"],
     ["동공", "Pupil", "", "투영 렌즈가 받아들이는 각도 범위를 원으로 나타낸 것. 원의 반지름이 NA에 해당하고, 회절 차수는 이 원 위의 점으로 그려진다. 원 안에 들어온 차수만 웨이퍼에 도달한다.", "optics", "diffraction", ["illumination"]],
     ["공간상", "Aerial image", "", "레지스트가 없다고 할 때 웨이퍼 위치에 맺히는 빛의 세기 분포. 광학계가 만든 결과물이며, 레지스트는 이 분포를 문턱으로 잘라 무늬로 바꾼다.", "optics", "diffraction", ["resist"]],
     ["상 대비", "Image contrast", "", "공간상의 밝은 곳과 어두운 곳의 차이를 (최대 − 최소)/(최대 + 최소)로 나타낸 값. 1이면 완전한 명암, 0이면 무늬가 없다. 피치가 작아지고 초점이 어긋날수록 떨어진다.", "optics", "diffraction"],
@@ -272,7 +272,7 @@
     ["제르니케 다항식", "Zernike polynomials", "Z5 … Z11", "동공 위의 파면 오차를 나누어 적는 직교 함수 집합. 항마다 디포커스, 비점 수차, 코마, 구면 수차 같은 이름이 있다. 수차의 크기는 각 항의 계수(파장 단위)로 적는다.", "optics", "focus"],
     ["축소 투영", "Reduction projection", "4×", "마스크의 무늬를 1/4로 줄여 웨이퍼에 옮기는 방식. 마스크의 치수와 오차가 웨이퍼에서 1/4이 되므로 마스크 제작이 쉬워진다. High-NA EUV는 한 방향만 1/8이다.", "optics", "overview", ["mask"]],
     // 마스크
-    ["마스크 (레티클)", "Photomask / reticle", "", "회로 무늬가 새겨진 원판. 152 mm 정사각형 석영 기판 위에 차광막을 입혀 만든다. 층마다 한 장 이상이 필요하고, 한 번 축소 투영해 한 필드를 찍는 것을 레티클이라고도 부른다.", "mask", "mask", ["overview"]],
+    ["마스크 (레티클)", "Photomask / reticle", "", "회로 무늬가 새겨진 원판. 투과형 마스크는 대표적으로 152 mm 정사각형 석영 기판 위에 차광막을 입혀 만든다. EUV는 반사형을 쓴다. 층마다 한 장 이상이 필요하며 축소 투영 노광에 쓰는 마스크를 레티클이라 부른다.", "mask", "mask", ["overview"]],
     ["바이너리 마스크", "Binary intensity mask", "BIM", "빛을 통과시키는 곳과 막는 곳 두 가지로만 이루어진 마스크. 크롬이나 불투명 MoSi를 차광막으로 쓴다. 구조가 단순하지만 작은 피치에서 대비가 낮다.", "mask", "mask"],
     ["위상 변이 마스크", "Phase-shift mask", "PSM", "빛의 세기뿐 아니라 위상을 180° 뒤집어 쓰는 마스크. 위상이 반대인 빛이 만나는 자리에서 세기가 0이 되어 가장자리가 날카로워진다.", "mask", "mask"],
     ["감쇠 위상 변이 마스크", "Attenuated PSM", "att-PSM", "차광부가 빛을 약 6% 통과시키되 위상을 180° 뒤집는 마스크. MoSi 막을 쓴다. 제작이 바이너리와 비슷하게 쉬우면서 대비가 좋아져 ArF의 표준이 되었다.", "mask", "mask"],
@@ -400,7 +400,7 @@
     ["스텝 앤드 스캔", "Step-and-scan", "", "한 필드를 스캔으로 찍고 다음 필드로 이동(스텝)하기를 되풀이하는 동작. 웨이퍼 한 장에 약 100개 안팎의 필드를 찍는다.", "scanner", "overview"],
     ["노광 필드", "Exposure field", "", "한 번의 스캔으로 찍는 영역. 최대 26 × 33 mm이며 그 안에 칩이 하나 이상 들어간다. 샷이라고도 한다.", "scanner", "overview"],
     ["슬릿", "Slit", "", "스캐너가 한순간에 비추는 좁고 긴 영역. 폭 26 mm이고 스캔 방향으로 수 mm다. EUV에서는 호 모양이다.", "scanner", "overview"],
-    ["레티클 스테이지", "Reticle stage", "", "마스크를 잡고 움직이는 스테이지. 축소 배율이 1/4이므로 웨이퍼 스테이지보다 4배 빠르게, 반대 방향으로 움직인다.", "scanner", "overview"],
+    ["레티클 스테이지", "Reticle stage", "", "마스크를 잡고 움직이는 스테이지. 이 책의 4배 축소 예제에서는 웨이퍼 스테이지보다 4배 빠르게, 반대 방향으로 움직인다. 속도 비는 스캔 방향의 축소 배율에 따른다.", "scanner", "overview"],
     ["웨이퍼 스테이지", "Wafer stage", "", "웨이퍼를 잡고 nm 정밀도로 움직이는 스테이지. 자기 부상으로 떠서 움직이며 위치는 간섭계나 격자 인코더로 잰다.", "scanner", "overview", ["overlay"]],
     ["투영 광학계", "Projection optics", "", "마스크의 상을 웨이퍼에 축소해 맺는 렌즈(또는 거울) 묶음. ArF는 수십 장의 렌즈, EUV는 6장 안팎의 거울로 이루어진다.", "scanner", "overview", ["focus"]],
     ["레벨링", "Leveling", "", "노광 전에 웨이퍼 표면의 높이 지도를 재고, 스캔하는 동안 스테이지의 높이와 기울기를 맞춰 슬릿 안을 초점에 두는 동작.", "scanner", "focus"],
